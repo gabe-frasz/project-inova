@@ -218,7 +218,7 @@ footer .info-contact div div:first-child {
 footer h1, footer h2, footer p {
     margin: 0;
 }
-footer div:nth-child(2) {
+footer div div div div:nth-child(2) {
     padding-left: 15px;
     margin-right: 50px;
 }
@@ -229,6 +229,18 @@ footer h1 {
 
 
 /************************************ MEDIA QUERIES ************************************/
+@media (max-width:319px) {
+    #banner .intro a.button {
+        width: 100%;
+    }
+}
+
+@media (max-width:575px) {
+    #services .services-block {
+        margin: 0px 0px 40px 0px;
+    }
+}
+
 @media (max-width:767px) {
     header .logo {
         border-right: 0;
@@ -236,11 +248,21 @@ footer h1 {
 
     #banner {
         text-align: center;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
+    }
+    #banner .intro {
+        padding-top: 15px;
     }
     #banner .intro p {
         max-width: none;
         margin: 30px auto;
+    }
+    #banner .intro a.button {
+        margin: 30px auto;
+    }    
+
+    #services .title {
+        width: 100%;
     }
 
     #services .services-block {
@@ -252,9 +274,12 @@ footer h1 {
     }
 
     footer h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 100%;
     }    
+    footer a {
+        font-size: 0.7rem;
+    }
     footer div div div div:nth-child(2) {
         padding-left: 15px;
         margin-right: 0;
