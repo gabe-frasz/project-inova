@@ -65,6 +65,9 @@ header .logo {
     height: 35px;
     border-right: 2px solid black;
 }
+header .logo a:hover, header li a:hover {
+    color: var(--cor1);
+}
 header h1 {
     margin: 0;
     line-height: 100%;
@@ -82,7 +85,7 @@ header ul li {
     margin: 0px 20px;
 }
 header a.button {
-    width: 25vw;
+    width: 17vw;
     color: white;
     background: var(--cor1);
 }
@@ -91,7 +94,7 @@ header a.button {
 /************************************ MAIN ************************************/
 #banner {
     width: 100%;
-    height: 75vh;
+    height: calc(100vh - 65px);
     background: url('../img/simone-hutsch-_wpce-AsLxk-unsplash.jpg') no-repeat center center;
     background-size: cover;
 }
@@ -109,6 +112,12 @@ header a.button {
     margin-top: 15px;
     font-size: 1.2rem;
     font-weight: 500;
+}
+#banner .intro a.button {
+    width: 50%;
+    margin: 50px auto;
+    background: var(--cor1);
+    color: white;
 }
 
 
@@ -131,8 +140,9 @@ header a.button {
     text-transform: uppercase;
 }
 #services .services-block {
-    width: clamp(200px, 20vw, 350px);
-    margin: 0px 40px;
+    width: 300px;
+    height: 380px;
+    margin: 0px 40px 40px 40px;
     padding: 15px 0px;
     background: white;
     color: black;
@@ -146,24 +156,20 @@ header a.button {
     font-size: 1.3rem;
     line-height: 2rem;
 }
-#services .services-block div#fachada {
+#services .services-block div {
     width: 100%;
-    height: 136px;
+    height: 210px;
     margin: 20px 0px;
+}
+#services .services-block div#fachada {
     background: url('../img/priscilla-du-preez-BuDD1HGco-4-unsplash.jpg') no-repeat;
     background-size: cover;
 }
 #services .services-block div#vidro {
-    width: 100%;
-    height: 136px;
-    margin: 20px 0px;
     background: url('../img/ryoji-iwata-Fusx3dlbqpw-unsplash.jpg') no-repeat bottom;
     background-size: cover;
 }
 #services .services-block div#ved {
-    width: 100%;
-    height: 136px;
-    margin: 20px 0px;
     background: url('../img/klim-musalimov-BEmzCMdw8oc-unsplash.jpg') no-repeat center;
     background-size: cover;
 }
@@ -193,6 +199,7 @@ header a.button {
     background: black;
     color: var(--cor1);
     text-align: center;
+    color: var(--cor0);
 }
 #about .title {
     margin-bottom: 50px;
@@ -209,7 +216,7 @@ footer {
     padding: 30px 0px;
     text-align: center;
 }
-footer .info-contact div:first-child {
+footer .info-contact div div:first-child {
     padding: 5px 15px 5px 0px;
     border-right: 3px solid black;
 }
@@ -222,4 +229,34 @@ footer div:nth-child(2) {
 }
 footer h1 {
     color: var(--cor-gray);
+}
+
+
+
+/************************************ MEDIA QUERIES ************************************/
+@media (max-width:767px) {
+    header .logo {
+        border-right: 0;
+    }
+
+    #banner {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    #banner .intro p {
+        max-width: none;
+        margin: 30px auto;
+    }
+
+    #services .services-block {
+        width: 250px;
+    }
+    
+    #about .content p {
+        font-size: 0.85rem;
+    }
+
+    footer .copy {
+        font-size: 0.75rem;
+    }
 }
