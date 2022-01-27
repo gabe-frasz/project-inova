@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Krona';
+    src: url('../fonts/Titulos\ -\ Krona\ one.ttf');
+}
+@font-face {
+    font-family: 'DM-sans';
+    src: url('../fonts/Textos\ e\ subtitulos\ -\ DM\ Sans.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-title: 'Krona', Arial, Helvetica, sans-serif;
+    --font-text: 'DM-sans', Arial, Helvetica, sans-serif;
+
+    --cor0: #b73511;
+    --cor1: #db3609;
+    --cor2: #e85128;
+    --cor-gray: #515151;
+}
+
+html, body {
+    font-size: medium;
+    font-family: var(--font-text);
+}
+body > img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+}
+
+.button {
+    padding: 8px 30px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.container-fluid {
+    width: 90%;
+}
+
+/************************************ HEADER ************************************/
+header {
+    padding: 15px 0px;
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+header .logo {
+    width: 200px;
+    height: 35px;
+    border-right: 2px solid black;
+}
+header h1 {
+    margin: 0;
+    line-height: 100%;
+}
+header nav {
+    flex: 1;
+}
+header ul {
+    list-style-type: none;
+    margin: 0;
+}
+header ul li {
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+}
+header a.button {
+    width: 25vw;
+    color: white;
+    background: var(--cor1);
+}
+
+
+/************************************ MAIN ************************************/
+#banner {
+    width: 100%;
+    height: 70vh;
+    background: url('../img/simone-hutsch-_wpce-AsLxk-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+}
+#banner .gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #db36099a);
+}
+#banner .intro {
+    padding-top: 70px;
+    color: black;
+}
+#banner .intro p {
+    max-width: 75%;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+#services {
+    margin-top: -50px;
+    padding: 120px 0px 80px 0px;
+    background: var(--cor1);
+    color: white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-align: center;
+}
+#services .title {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 60px;
+    text-align: center;
+}
+#services .title h2 {
+    text-transform: uppercase;
+}
+#services .services-block {
+    width: clamp(200px, 20vw, 350px);
+    margin: 0px 40px;
+    padding: 15px 0px;
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+#services .services-block h3 {
+    margin: 0;
+    font-family: var(--font-text);
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+#services .services-block img {
+    width: 100%;
+    margin: 20px 0px;
+}
+#services .services-block p {
+    margin: 0;
+}
+#services .services-block:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#services .services-block:hover > p {
+    color: var(--cor1);
+}
+#services a.button {
+    display: inline-block;
+    margin-top: 70px;
+    background: white;
+    color: var(--cor1);
+}
+
+
+#about {
+    padding: 70px 0px;
+    background: black;
+    color: var(--cor1);
+    text-align: center;
+}
+#about .title {
+    margin-bottom: 50px;
+}
+#about .content p {
+    width: 75%;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+
+/************************************ FOOTER ************************************/
+footer {
+    padding: 30px 0px;
+    text-align: center;
+}
+footer .info-contact div:first-child {
+    padding: 5px 15px 5px 0px;
+    border-right: 3px solid black;
+}
+footer h1, footer h2, footer p {
+    margin: 0;
+}
+footer div:nth-child(2) {
+    padding-left: 15px;
+    margin-right: 50px;
+}
+footer h1 {
+    color: var(--cor-gray);
+}
