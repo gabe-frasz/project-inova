@@ -191,6 +191,9 @@ header a.button:hover {
 #services .title h2 {
     text-transform: uppercase;
 }
+#services .content > a, #services .content > a:hover {
+    cursor: default;
+}
 #services .services-block {
     width: 300px;
     height: 380px;
