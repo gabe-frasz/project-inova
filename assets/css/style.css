@@ -25,6 +25,7 @@
 }
 
 html, body {
+    width: 100vw;
     font-size: medium;
     font-family: var(--font-text);
     overflow-x: hidden;
@@ -95,6 +96,12 @@ header .logo {
 header .logo svg {
     width: 100%;
     height: 100%;
+}
+header .logo a svg path {
+    transition: all .2s ease-in-out;
+}
+header .logo a svg:hover path {
+    fill: var(--cor1);
 }
 header nav {
     flex: 1;
@@ -238,6 +245,44 @@ header a.button:hover {
     width: 75%;
     margin: auto;
     font-size: 1.2rem;
+}
+
+
+
+/***************** TELAS CONTATO/SOBRE *****************/
+#contact-about {
+    background: var(--cor1);
+    color: white;
+    text-align: center;
+}
+#contact-about .text {
+    padding: 70px 0px;
+}
+#contact-about .text p:nth-child(2) {
+    margin: 30px auto;
+}
+#contact-about .text a:first-child {
+    margin-bottom: 15px;
+}
+#contact-about .orcamento {
+    padding: 60px 0px;
+}
+#contact-about p {
+    max-width: 1200px;
+    margin: auto;
+}
+#contact-about hr {
+    margin: 0;
+    height: 3px;
+}
+#contact-about a:not(a.button) {
+    text-decoration: underline;
+}
+#contact-about a.button {
+    margin-top: 20px;
+    display: inline-block;
+    background: white;
+    color: var(--cor1);
 }
 
 
