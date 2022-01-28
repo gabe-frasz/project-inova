@@ -151,6 +151,8 @@ header a.button:hover {
 #banner .intro {
     padding-top: 70px;
     color: black;
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
 }
 #banner .intro p {
     max-width: 75%;
@@ -159,6 +161,7 @@ header a.button:hover {
     font-weight: 500;
 }
 #banner .intro a.button {
+    display: inline-block;
     width: 50%;
     margin: 50px auto;
     background: var(--cor1);
