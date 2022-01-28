@@ -31,9 +31,29 @@ html, body {
 }
 
 a {
+    position: relative;
     text-decoration: none;
     color: inherit;
 }
+a:hover {
+    color: inherit;
+}
+a.link::after {
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    left: 0;
+    bottom: 5px;
+    background: var(--cor2);
+    opacity: 0.8;
+    z-index: -1;
+    transition: all .3s ease;
+}
+a.link:hover::after {
+    width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-title);
 }
@@ -42,6 +62,17 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8px 30px;
     border-radius: 7px;
     text-align: center;
+    transition: all .3s ease;
+}
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px #0000005e;
+}
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #db36099a);
 }
 
 .container-fluid {
@@ -58,14 +89,12 @@ header {
 header .logo {
     width: 200px;
     height: 35px;
+    padding-right: 30px;
     border-right: 2px solid black;
 }
-header .logo a:hover, header li a:hover {
-    color: var(--cor1);
-}
-header h1 {
-    margin: 0;
-    line-height: 100%;
+header .logo svg {
+    width: 100%;
+    height: 100%;
 }
 header nav {
     flex: 1;
@@ -77,12 +106,16 @@ header ul {
 header ul li {
     display: flex;
     align-items: center;
-    margin: 0px 20px;
+    margin-right: 40px;
 }
 header a.button {
     width: 17vw;
     color: white;
     background: var(--cor1);
+}
+header a.button:hover {
+    background: white;
+    color: var(--cor1);
 }
 
 
@@ -92,11 +125,6 @@ header a.button {
     height: calc(100vh - 65px);
     background: url('../img/simone-hutsch-_wpce-AsLxk-unsplash.jpg') no-repeat center center;
     background-size: cover;
-}
-.gradient {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #db36099a);
 }
 #banner .intro {
     padding-top: 70px;
@@ -113,6 +141,10 @@ header a.button {
     margin: 50px auto;
     background: var(--cor1);
     color: white;
+}
+#banner .intro a.button:hover {
+    background: white;
+    color: var(--cor1);
 }
 
 
@@ -185,6 +217,9 @@ header a.button {
     display: inline-block;
     margin-top: 70px;
     background: white;
+    color: black;
+}
+#services a.button:hover {
     color: var(--cor1);
 }
 
@@ -230,25 +265,31 @@ footer h1 {
 
 /************************************ MEDIA QUERIES ************************************/
 @media (max-width:319px) {
-    #banner .intro a.button {
-        width: 100%;
-    }
 }
 
 @media (max-width:575px) {
+    #banner .intro a.button {
+        width: 100%;
+    }
+
     #services .services-block {
         margin: 0px 0px 40px 0px;
     }
 }
 
 @media (max-width:767px) {
+    .button {
+        font-size: 0.9rem;
+    }
+
     header .logo {
+        width: 100px;
+        padding: 0;
         border-right: 0;
     }
 
     #banner {
         text-align: center;
-        font-size: 0.6rem;
     }
     #banner .intro {
         padding-top: 15px;
@@ -261,6 +302,12 @@ footer h1 {
         margin: 30px auto;
     }    
 
+
+    #services {
+        margin-top: -80px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
     #services .title {
         width: 100%;
     }
@@ -285,6 +332,6 @@ footer h1 {
         margin-right: 0;
     }    
     footer .copy {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
     }
 }
