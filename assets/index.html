@@ -15,7 +15,7 @@
 </head>
 <body>
     <header class="d-flex align-items-center">
-        <div class="container-fluid d-flex align-items-center">
+        <div class="container-fluid d-flex justify-content-between justify-content-md-start align-items-center">
             <div class="logo">
                 <a href="index.html">
                     <svg viewBox="0 0 509 103" xmlns="http://www.w3.org/2000/svg">
@@ -27,17 +27,18 @@
                     </svg>                        
                 </a>
             </div>
-
-            <nav class="d-none d-md-flex justify-content-between align-items-center">
+            
+            <div class="toggle-menu d-md-none"></div>
+            
+            <nav class="navigation">
                 <ul class="d-flex align-items-center">
                     <li><a href="contato.html" rel="next" class="link">Contato</a></li>
                     <li><a href="sobre.html" rel="next" class="link">Sobre</a></li>
                 </ul>
-
+                
                 <a href="orcamento.html" rel="next" class="button">Solicitar orçamento</a>
             </nav>
-
-
+            
         </div>
     </header>
 
@@ -94,7 +95,39 @@
                     </a>
                 </div>
 
-                <a href="#" class="button">Veja mais serviços</a>
+                <div id="mais-servicos" class="content flex-wrap justify-content-center align-items-center" style="display: none;">
+                    <a href="pintura.html" rel="next">
+                        <div class="services-block">
+                            <h3>Pinturas prediais</h3>
+                            <div id="fachada">
+                                <div class="gradient"></div>
+                            </div>
+                            <p>Ver mais</p>
+                        </div>
+                    </a>
+
+                    <a href="equip.html" rel="next">
+                        <div class="services-block">
+                            <h3>Equipamentos <br> e instalações</h3>
+                            <div id="vidro">
+                                <div class="gradient"></div>
+                            </div>
+                            <p>Ver mais</p>
+                        </div>
+                    </a>
+
+                    <a href="outros.html" rel="next">
+                        <div class="services-block">
+                            <h3>Outros serviços <br> <em></em> altura</h3>
+                            <div id="ved">
+                                <div class="gradient"></div>
+                            </div>
+                            <p>Ver mais</p>
+                        </div>
+                    </a>
+                </div>
+
+                <button id="botao-mais-servicos" class="button">Veja mais serviços</button>
             </div>
         </section>
 

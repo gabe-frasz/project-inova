@@ -119,6 +119,9 @@ header .logo a svg:hover path {
     fill: var(--cor1);
 }
 header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex: 1;
 }
 header ul {
@@ -138,6 +141,39 @@ header a.button {
 header a.button:hover {
     background: white;
     color: var(--cor1);
+}
+
+header .toggle-menu {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 999;
+}
+.toggle-menu::before {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: black;
+    box-shadow: 0px 12px 0px black;
+    transition: all .3s ease;
+}
+.toggle-menu::after {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: black;
+    transform: translateY(25px);
+    transition: all .3s ease;
+}
+.toggle-menu.active::before {
+    transform: translateY(12px) rotate(45deg);
+    box-shadow: none;
+}
+.toggle-menu.active::after {
+    transform: translateY(12px) rotate(-45deg);
 }
 
 
@@ -241,14 +277,19 @@ header a.button:hover {
 #services .services-block:hover > p {
     color: var(--cor1);
 }
-#services a.button {
+#services .button {
     display: inline-block;
     margin-top: 70px;
     background: white;
     color: black;
+    border: 0;
 }
-#services a.button:hover {
+#services .button:hover {
     color: var(--cor1);
+}
+
+#services #mais-servicos {
+    animation: .3s ease;
 }
 
 
@@ -330,9 +371,6 @@ footer h1 {
 
 
 /************************************ MEDIA QUERIES ************************************/
-@media (max-width:319px) {
-}
-
 @media (max-width:575px) {
     #banner .intro a.button {
         width: 100%;
@@ -344,6 +382,10 @@ footer h1 {
 }
 
 @media (max-width:767px) {
+    html, body {
+        font-size: small;
+    }
+
     .button {
         font-size: 0.9rem;
     }
@@ -353,6 +395,56 @@ footer h1 {
         padding: 0;
         border-right: 0;
     }
+
+
+    header nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 998;
+        background: white;
+        transition: all .3s ease;
+        transform: translateX(12000px);
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    header nav ul li {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    header nav a.button {
+        width: clamp(250px, 50vw, 500px);
+    }
+
+    .toggle-menu.active + nav {
+        transform: translateX(0);
+    }    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     #banner {
         text-align: center;
@@ -381,6 +473,9 @@ footer h1 {
     #services .services-block {
         width: 250px;
     }
+    #services .services-block p {
+        margin-top: 30px;
+    }
     
     #about .content p {
         font-size: 0.85rem;
@@ -391,13 +486,26 @@ footer h1 {
         line-height: 100%;
     }    
     footer a {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     footer div div div div:nth-child(2) {
         padding-left: 15px;
         margin-right: 0;
     }    
     footer .copy {
-        font-size: 0.65rem;
+        font-size: 0.75rem;
     }
 }
+
+
+
+/************************************ ANIMATION ************************************/
+@keyframes div-show {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
