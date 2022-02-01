@@ -147,8 +147,8 @@ header a.button:hover {
 
 header .toggle-menu {
     position: relative;
-    width: 40px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
     cursor: pointer;
     z-index: 999;
 }
@@ -158,7 +158,7 @@ header .toggle-menu {
     width: 100%;
     height: 3px;
     background: black;
-    box-shadow: 0px 12px 0px black;
+    box-shadow: 0px 8px 0px black;
     transition: all .3s ease;
 }
 .toggle-menu::after {
@@ -167,15 +167,15 @@ header .toggle-menu {
     width: 100%;
     height: 3px;
     background: black;
-    transform: translateY(25px);
+    transform: translateY(17px);
     transition: all .3s ease;
 }
 .toggle-menu.active::before {
-    transform: translateY(12px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
     box-shadow: none;
 }
 .toggle-menu.active::after {
-    transform: translateY(12px) rotate(-45deg);
+    transform: translateY(7px) rotate(-45deg);
 }
 
 
@@ -183,7 +183,7 @@ header .toggle-menu {
 #banner {
     width: 100%;
     height: calc(100vh - 65px);
-    background: url('../img/simone-hutsch-_wpce-AsLxk-unsplash.jpg') no-repeat center center;
+    background: url('../img/Fundo\ tela\ principals.jpg') no-repeat center center;
     background-size: cover;
 }
 #banner .intro {
@@ -255,15 +255,27 @@ header .toggle-menu {
     margin: 20px 0px;
 }
 #services .services-block div#fachada {
-    background: url('../img/priscilla-du-preez-BuDD1HGco-4-unsplash.jpg') no-repeat;
+    background: url('../img/Limpeza\ de\ fachadas.jpg') no-repeat;
     background-size: cover;
 }
 #services .services-block div#vidro {
-    background: url('../img/ryoji-iwata-Fusx3dlbqpw-unsplash.jpg') no-repeat bottom;
+    background: url('../img/Limpeza\ de\ vidross.jpg') no-repeat bottom;
     background-size: cover;
 }
 #services .services-block div#ved {
-    background: url('../img/klim-musalimov-BEmzCMdw8oc-unsplash.jpg') no-repeat center;
+    background: url('../img/Vedação\ e\ calafetaçãos.jpg') no-repeat center;
+    background-size: cover;
+}
+#services .services-block div#pint {
+    background: url('../img/pinturas\ prediaiss.jpg') no-repeat bottom;
+    background-size: cover;
+}
+#services .services-block div#equip {
+    background: url('../img/Equipamentos\ e\ instalaçõess.jpg') no-repeat center;
+    background-size: cover;
+}
+#services .services-block div#outros {
+    background: url('../img/Outros\ serviços\ em\ alturas.jpg') no-repeat bottom;
     background-size: cover;
 }
 #services .services-block div.gradient {
@@ -419,16 +431,18 @@ footer h1 {
         margin-bottom: 30px;
     }
     header nav ul li {
-        margin-bottom: 20px;
-        font-size: 1.5rem;
+        margin-bottom: 30px;
+        font-size: 1.7rem;
     }
     header nav a.button {
         width: clamp(250px, 50vw, 500px);
+        height: 40px;
+        line-height: 20px;
     }
 
     .toggle-menu.active {
         position: fixed;
-        right: 30px;
+        right: 7vw;
     }
     .toggle-menu.active + nav {
         transform: translateX(0);

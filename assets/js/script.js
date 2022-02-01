@@ -24,4 +24,3 @@ botaoMaisServicos.onclick = () => {
         botaoMaisServicos.innerHTML = "Veja mais serviços";
     };
 };
-
