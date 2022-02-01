@@ -22,7 +22,7 @@ main {
     background: var(--cor1);
     border-radius: 30px;
 }
-.list ul {
+.list > ul {
     width: fit-content;
     margin: auto;
     text-align: left;

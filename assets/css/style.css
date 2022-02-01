@@ -432,12 +432,13 @@ footer h1 {
     }
     header nav ul li {
         margin-bottom: 30px;
-        font-size: 1.7rem;
+        font-size: 1.95rem;
     }
     header nav a.button {
         width: clamp(250px, 50vw, 500px);
-        height: 40px;
-        line-height: 20px;
+        height: 50px;
+        font-size: 1.5rem;
+        line-height: 30px;
     }
 
     .toggle-menu.active {
