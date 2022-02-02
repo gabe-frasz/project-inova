@@ -311,9 +311,8 @@ header .toggle-menu {
     height: 523px;
     padding: 70px 0px;
     background: black;
-    color: var(--cor1);
+    color: white;
     text-align: center;
-    color: var(--cor0);
     position: relative;
 }
 #about .title {
