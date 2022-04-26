@@ -1,531 +1,527 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'Krona';
-    src: url('../fonts/Titulos\ -\ Krona\ one.ttf');
+  font-family: "Krona";
+  src: url("../fonts/Titulos\ -\ Krona\ one.ttf");
 }
 @font-face {
-    font-family: 'DM-sans';
-    src: url('../fonts/Textos\ e\ subtitulos\ -\ DM\ Sans.ttf');
+  font-family: "DM-sans";
+  src: url("../fonts/Textos\ e\ subtitulos\ -\ DM\ Sans.ttf");
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --font-title: 'Krona', Arial, Helvetica, sans-serif;
-    --font-text: 'DM-sans', Arial, Helvetica, sans-serif;
+  --font-title: "Krona", Arial, Helvetica, sans-serif;
+  --font-text: "DM-sans", Arial, Helvetica, sans-serif;
 
-    --cor0: #b73511;
-    --cor1: #db3609;
-    --cor2: #e85128;
-    --cor-gray: #515151;
+  --cor0: #b73511;
+  --cor1: #db3609;
+  --cor2: #e85128;
+  --cor-gray: #515151;
 }
 
-html, body {
-    width: 100vw;
-    font-size: medium;
-    font-family: var(--font-text);
-    overflow-x: hidden;
+html,
+body {
+  width: 100vw;
+  font-size: medium;
+  font-family: var(--font-text);
+  overflow-x: hidden;
 }
 
 a {
-    position: relative;
-    text-decoration: none;
-    color: inherit;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
 }
 a:hover {
-    color: inherit;
+  color: inherit;
 }
 a.link::after {
-    content:"";
-    position: absolute;
-    width: 0;
-    height: 4px;
-    left: 0;
-    bottom: 5px;
-    background: var(--cor2);
-    opacity: 0.8;
-    z-index: -1;
-    transition: all .3s ease;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: 5px;
+  background: var(--cor2);
+  opacity: 0.8;
+  z-index: -1;
+  transition: all 0.3s ease;
 }
 a.link:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-title);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
 }
 
 .button {
-    padding: 8px 30px;
-    border-radius: 7px;
-    border: 0;
-    outline: 0;
-    text-align: center;
-    transition: all .3s ease;
+  padding: 8px 30px;
+  border-radius: 7px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 .button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 3px 10px #0000005e;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px #0000005e;
 }
 
 .gradient {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #db36099a);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #db36099a);
 }
 
 .container-fluid {
-    width: 90%;
+  width: 90%;
 }
 
 /************************************ HEADER ************************************/
 header {
-    padding: 15px 0px;
-    color: black;
-    font-size: 0.95rem;
-    font-weight: 500;
+  padding: 15px 0px;
+  color: black;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 header .logo {
-    width: 200px;
-    height: 35px;
-    padding-right: 30px;
-    border-right: 2px solid black;
+  width: 200px;
+  height: 35px;
+  padding-right: 30px;
+  border-right: 2px solid black;
 }
 header .logo svg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 header .logo a svg path {
-    transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 header .logo a svg path:nth-child(1) {
-    transition-delay: 0s;
+  transition-delay: 0s;
 }
 header .logo a svg path:nth-child(2) {
-    transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 header .logo a svg path:nth-child(3) {
-    transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 header .logo a svg path:nth-child(4) {
-    transition-delay: 0.35s;
+  transition-delay: 0.35s;
 }
 header .logo a svg path:nth-child(5) {
-    transition-delay: 0.05s;
+  transition-delay: 0.05s;
 }
 header .logo a svg:hover path {
-    fill: var(--cor1);
+  fill: var(--cor1);
 }
 header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
 }
 header ul {
-    list-style-type: none;
-    margin: 0;
+  list-style-type: none;
+  margin: 0;
 }
 header ul li {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
 }
 header a.button {
-    width: 17vw;
-    color: white;
-    background: var(--cor1);
+  width: 17vw;
+  color: white;
+  background: var(--cor1);
 }
 header a.button:hover {
-    background: white;
-    color: var(--cor1);
+  background: white;
+  color: var(--cor1);
 }
 
 header .toggle-menu {
-    position: relative;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    z-index: 999;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 999;
 }
 .toggle-menu::before {
-    content:"";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background: black;
-    box-shadow: 0px 8px 0px black;
-    transition: all .3s ease;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: black;
+  box-shadow: 0px 8px 0px black;
+  transition: all 0.3s ease;
 }
 .toggle-menu::after {
-    content:"";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background: black;
-    transform: translateY(17px);
-    transition: all .3s ease;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: black;
+  transform: translateY(17px);
+  transition: all 0.3s ease;
 }
 .toggle-menu.active::before {
-    transform: translateY(7px) rotate(45deg);
-    box-shadow: none;
+  transform: translateY(7px) rotate(45deg);
+  box-shadow: none;
 }
 .toggle-menu.active::after {
-    transform: translateY(7px) rotate(-45deg);
+  transform: translateY(7px) rotate(-45deg);
 }
-
 
 /************************************ MAIN ************************************/
 #banner {
-    width: 100%;
-    height: calc(100vh - 65px);
-    background: url('../img/Fundo\ tela\ principals.jpg') no-repeat center center;
-    background-size: cover;
+  width: 100%;
+  height: calc(100vh - 65px);
+  background: url("../img/banner.png") no-repeat right center;
+  background-size: cover;
 }
 #banner .intro {
-    padding-top: 70px;
-    color: black;
-    backdrop-filter: blur(1px);
-    border-radius: 20px;
+  padding-top: 70px;
+  color: black;
+  backdrop-filter: blur(1px);
+  border-radius: 20px;
 }
 #banner .intro p {
-    max-width: 75%;
-    margin-top: 15px;
-    font-size: 1.2rem;
-    font-weight: 500;
+  max-width: 75%;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 #banner .intro a.button {
-    display: inline-block;
-    width: 50%;
-    margin: 50px auto;
-    background: var(--cor1);
-    color: white;
+  display: inline-block;
+  width: 50%;
+  margin: 50px auto;
+  background: var(--cor1);
+  color: white;
 }
 #banner .intro a.button:hover {
-    background: white;
-    color: var(--cor1);
+  background: white;
+  color: var(--cor1);
 }
-
 
 #services {
-    margin-top: -50px;
-    padding: 120px 0px 80px 0px;
-    background: var(--cor1);
-    color: white;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    text-align: center;
+  margin-top: -50px;
+  padding: 120px 0px 80px 0px;
+  background: var(--cor1);
+  color: white;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  text-align: center;
 }
 #services .title {
-    width: 50%;
-    margin: auto;
-    margin-bottom: 60px;
-    text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 60px;
+  text-align: center;
 }
 #services .title h2 {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
-#services .content > a, #services .content > a:hover {
-    cursor: default;
+#services .content > a,
+#services .content > a:hover {
+  cursor: default;
 }
 #services .services-block {
-    width: 300px;
-    height: 380px;
-    margin: 0px 40px 40px 40px;
-    padding: 15px 0px;
-    background: white;
-    color: black;
-    text-align: center;
-    border-radius: 20px;
-    transition: all .3s ease;
+  width: 300px;
+  height: 380px;
+  margin: 0px 40px 40px 40px;
+  padding: 15px 0px;
+  background: white;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 #services .services-block h3 {
-    margin: 0;
-    font-family: var(--font-text);
-    font-size: 1.3rem;
-    line-height: 2rem;
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 1.3rem;
+  line-height: 2rem;
 }
 #services .services-block div {
-    width: 100%;
-    height: 210px;
-    margin: 20px 0px;
+  width: 100%;
+  height: 210px;
+  margin: 20px 0px;
 }
 #services .services-block div#fachada {
-    background: url('../img/Limpeza\ de\ fachadas.jpg') no-repeat;
-    background-size: cover;
+  background: url("../img/Limpeza\ de\ fachadas.jpg") no-repeat;
+  background-size: cover;
 }
 #services .services-block div#vidro {
-    background: url('../img/Limpeza\ de\ vidross.jpg') no-repeat bottom;
-    background-size: cover;
+  background: url("../img/Limpeza\ de\ vidross.jpg") no-repeat bottom;
+  background-size: cover;
 }
 #services .services-block div#ved {
-    background: url('../img/Vedação\ e\ calafetaçãos.jpg') no-repeat center;
-    background-size: cover;
+  background: url("../img/Vedação\ e\ calafetaçãos.jpg") no-repeat center;
+  background-size: cover;
 }
 #services .services-block div#pint {
-    background: url('../img/pinturas\ prediaiss.jpg') no-repeat bottom;
-    background-size: cover;
+  background: url("../img/pinturas\ prediaiss.jpg") no-repeat bottom;
+  background-size: cover;
 }
 #services .services-block div#equip {
-    background: url('../img/Equipamentos\ e\ instalaçõess.jpg') no-repeat center;
-    background-size: cover;
+  background: url("../img/Equipamentos\ e\ instalaçõess.jpg") no-repeat center;
+  background-size: cover;
 }
 #services .services-block div#outros {
-    background: url('../img/Outros\ serviços\ em\ alturas.jpg') no-repeat bottom;
-    background-size: cover;
+  background: url("../img/Outros\ serviços\ em\ alturas.jpg") no-repeat bottom;
+  background-size: cover;
 }
 #services .services-block div.gradient {
-    background: linear-gradient(180deg, transparent, #db36095d);
+  background: linear-gradient(180deg, transparent, #db36095d);
 }
 #services .services-block p {
-    margin: 0;
+  margin: 0;
 }
 #services .services-block:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 #services .services-block:hover > p {
-    color: var(--cor1);
+  color: var(--cor1);
 }
 #services .button {
-    display: inline-block;
-    margin-top: 70px;
-    background: white;
-    color: black;
-    border: 0;
+  display: inline-block;
+  margin-top: 70px;
+  background: white;
+  color: black;
+  border: 0;
 }
 #services .button:hover {
-    color: var(--cor1);
+  color: var(--cor1);
 }
 
 #services #mais-servicos {
-    animation: .3s ease;
+  animation: 0.3s ease;
 }
-
 
 #about {
-    height: 523px;
-    padding: 70px 0px;
-    background: black;
-    color: white;
-    text-align: center;
-    position: relative;
+  height: 523px;
+  padding: 70px 0px;
+  background: black;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 #about .title {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 #about .content p {
-    width: 75%;
-    margin: auto;
-    font-size: 1.2rem;
+  width: 75%;
+  margin: auto;
+  font-size: 1.2rem;
 }
 #about svg {
-    position: absolute;
-    width: auto;
-    height: 100%;
-    top: 0;
-    right: 7%;
-    fill: white;
-    opacity: 0.1;
+  position: absolute;
+  width: auto;
+  height: 100%;
+  top: 0;
+  right: 7%;
+  fill: white;
+  opacity: 0.1;
 }
-
 
 /***************** TELAS CONTATO/SOBRE *****************/
 #contact-about {
-    background: var(--cor1);
-    color: white;
-    text-align: center;
+  background: var(--cor1);
+  color: white;
+  text-align: center;
 }
 #contact-about .text {
-    padding: 70px 0px;
+  padding: 70px 0px;
 }
 #contact-about .text p:nth-child(2) {
-    margin: 30px auto;
+  margin: 30px auto;
 }
 #contact-about .text a:first-child {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 #contact-about .orcamento {
-    padding: 60px 0px;
+  padding: 60px 0px;
 }
 #contact-about p {
-    max-width: 1200px;
-    margin: auto;
+  max-width: 1200px;
+  margin: auto;
 }
 #contact-about hr {
-    margin: 0;
-    height: 3px;
+  margin: 0;
+  height: 3px;
 }
 #contact-about a:not(a.button) {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 #contact-about a.button {
-    margin-top: 20px;
-    display: inline-block;
-    background: white;
-    color: var(--cor1);
+  margin-top: 20px;
+  display: inline-block;
+  background: white;
+  color: var(--cor1);
 }
-
 
 /************************************ FOOTER ************************************/
 footer {
-    padding: 30px 0px;
-    text-align: center;
+  padding: 30px 0px;
+  text-align: center;
 }
 footer .info-contact div div:first-child {
-    padding: 5px 15px 5px 0px;
-    border-right: 3px solid black;
+  padding: 5px 15px 5px 0px;
+  border-right: 3px solid black;
 }
-footer h1, footer h2, footer p {
-    margin: 0;
+footer h1,
+footer h2,
+footer p {
+  margin: 0;
 }
 footer div div div div:nth-child(2) {
-    padding-left: 15px;
-    margin-right: 50px;
+  padding-left: 15px;
+  margin-right: 50px;
 }
 footer h1 {
-    color: var(--cor-gray);
+  color: var(--cor-gray);
 }
-
-
 
 /************************************ MEDIA QUERIES ************************************/
-@media (max-width:575px) {
-    #banner .intro a.button {
-        width: 100%;
-    }
+@media (max-width: 575px) {
+  #banner .intro a.button {
+    width: 100%;
+  }
 
-    #services .services-block {
-        margin: 0px 0px 40px 0px;
-    }
+  #services .services-block {
+    margin: 0px 0px 40px 0px;
+  }
 }
 
-@media (max-width:767px) {
-    html, body {
-        font-size: small;
-    }
+@media (max-width: 767px) {
+  html,
+  body {
+    font-size: small;
+  }
 
-    .button {
-        font-size: 0.9rem;
-    }
+  .button {
+    font-size: 0.9rem;
+  }
 
-    header .logo {
-        width: 100px;
-        padding: 0;
-        border-right: 0;
-    }
+  header .logo {
+    width: 100px;
+    padding: 0;
+    border-right: 0;
+  }
 
+  header nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background: white;
+    transition: all 0.3s ease;
+    transform: translateX(12000px);
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  header nav ul li {
+    margin-bottom: 30px;
+    font-size: 1.95rem;
+  }
+  header nav a.button {
+    width: clamp(250px, 50vw, 500px);
+    height: 50px;
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
 
-    header nav {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 998;
-        background: white;
-        transition: all .3s ease;
-        transform: translateX(12000px);
-    }
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
-    header nav ul li {
-        margin-bottom: 30px;
-        font-size: 1.95rem;
-    }
-    header nav a.button {
-        width: clamp(250px, 50vw, 500px);
-        height: 50px;
-        font-size: 1.5rem;
-        line-height: 30px;
-    }
+  .toggle-menu.active {
+    position: fixed;
+    right: 7vw;
+  }
+  .toggle-menu.active + nav {
+    transform: translateX(0);
+  }
 
-    .toggle-menu.active {
-        position: fixed;
-        right: 7vw;
-    }
-    .toggle-menu.active + nav {
-        transform: translateX(0);
-    }    
+  #banner {
+    text-align: center;
+  }
+  #banner .intro {
+    padding-top: 15px;
+  }
+  #banner .intro p {
+    max-width: none;
+    margin: 30px auto;
+  }
+  #banner .intro a.button {
+    margin: 30px auto;
+  }
 
+  #services {
+    margin-top: -80px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  #services .title {
+    width: 100%;
+  }
 
+  #services .services-block {
+    width: 250px;
+  }
+  #services .services-block p {
+    margin-top: 30px;
+  }
 
-    #banner {
-        text-align: center;
-    }
-    #banner .intro {
-        padding-top: 15px;
-    }
-    #banner .intro p {
-        max-width: none;
-        margin: 30px auto;
-    }
-    #banner .intro a.button {
-        margin: 30px auto;
-    }    
+  #about {
+    height: 250px;
+  }
+  #about .content p {
+    font-size: 0.85rem;
+  }
+  #about svg {
+    right: 0;
+  }
 
-
-    #services {
-        margin-top: -80px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-    #services .title {
-        width: 100%;
-    }
-
-    #services .services-block {
-        width: 250px;
-    }
-    #services .services-block p {
-        margin-top: 30px;
-    }
-    
-    #about {
-        height: 250px;
-    }
-    #about .content p {
-        font-size: 0.85rem;
-    }
-    #about svg {
-        right: 0;
-    }
-
-    footer h2 {
-        font-size: 1rem;
-        line-height: 100%;
-    }    
-    footer a {
-        font-size: 0.8rem;
-    }
-    footer div div div div:nth-child(2) {
-        padding-left: 15px;
-        margin-right: 0;
-    }    
-    footer .copy {
-        font-size: 0.75rem;
-    }
+  footer h2 {
+    font-size: 1rem;
+    line-height: 100%;
+  }
+  footer a {
+    font-size: 0.8rem;
+  }
+  footer div div div div:nth-child(2) {
+    padding-left: 15px;
+    margin-right: 0;
+  }
+  footer .copy {
+    font-size: 0.75rem;
+  }
 }
-
-
 
 /************************************ ANIMATION ************************************/
 @keyframes div-show {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
