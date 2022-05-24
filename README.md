@@ -2,4 +2,4 @@
 
  Inova website
 
-Designed by Ence Studio and developed by Gabriel Fras√£o.
+Designed by Ence Studio and developed by Gabriel Fras√o.
