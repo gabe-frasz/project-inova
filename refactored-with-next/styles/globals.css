@@ -5,8 +5,10 @@
 @tailwind utilities;
 
 html,
-body {
+body,
+button {
   font-family: "DM Sans", sans-serif;
+  font-weight: 500;
 }
 
 h1,
