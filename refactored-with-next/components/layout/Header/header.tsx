@@ -1,3 +1,4 @@
+import { Button } from "@components/widgets";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -12,7 +13,7 @@ export const Header = () => {
 
   return (
     <header>
-      <div className="container mx-auto px-1 py-4 flex justify-between lg:justify-start items-center">
+      <div className="container mx-auto px-4 py-4 flex justify-between lg:justify-start items-center">
         <div className="mr-6 pr-6 lg:border-r-[3px] border-black">
           <Link href="/">
             <a className="w-[50vw] max-w-[200px] block">
@@ -23,6 +24,30 @@ export const Header = () => {
                 <path d="M462.443 3.11658H444.931C443.966 3.11658 443.002 3.71022 442.631 4.60067L399.74 95.9466C398.924 97.6533 400.186 99.5826 402.041 99.5826H416.956C417.92 99.5826 418.885 98.9889 419.256 98.0985L425.341 84.8159C425.786 83.9254 426.677 83.3318 427.641 83.3318H480.698C481.662 83.3318 482.553 83.9254 482.998 84.8159L489.305 98.0985C489.75 98.9889 490.641 99.5826 491.606 99.5826H506.447C508.302 99.5826 509.563 97.5791 508.747 95.8724L464.595 4.52649C464.298 3.71024 463.408 3.11658 462.443 3.11658ZM434.691 65.0033L451.535 28.643C452.5 26.6395 455.394 26.5653 456.284 28.643L473.574 65.0033C474.39 66.7842 473.129 68.7877 471.199 68.7877H437.065C435.136 68.7877 433.874 66.7842 434.691 65.0033Z" />
                 <path d="M43.2613 1.33572H60.18C60.6252 1.33572 60.9962 1.40992 61.3673 1.63253L118.95 31.7596C120.657 32.6501 122.809 31.3886 122.809 29.4593V3.93288C122.809 2.52299 123.996 1.33572 125.406 1.33572H140.321C141.731 1.33572 142.918 2.52299 142.918 3.93288V98.1728C142.918 99.5827 141.731 100.77 140.321 100.77H125.48C124.07 100.77 122.883 99.5827 122.883 98.1728V56.7666C122.883 55.8019 122.363 54.9115 121.473 54.4662L64.6323 24.9328C62.9256 24.0423 60.7736 25.3038 60.7736 27.2331V98.247C60.7736 99.6568 59.5863 100.844 58.1765 100.844H43.2613C41.8514 100.844 40.6642 99.6568 40.6642 98.247V4.00709C40.6642 2.523 41.8514 1.33572 43.2613 1.33572Z" />
               </svg>
+
+              <style jsx>{`
+                svg path {
+                  transition: all 0.2s ease-in-out;
+                }
+                svg path:nth-child(1) {
+                  transition-delay: 0s;
+                }
+                svg path:nth-child(2) {
+                  transition-delay: 0.15s;
+                }
+                svg path:nth-child(3) {
+                  transition-delay: 0.25s;
+                }
+                svg path:nth-child(4) {
+                  transition-delay: 0.35s;
+                }
+                svg path:nth-child(5) {
+                  transition-delay: 0.05s;
+                }
+                svg:hover path {
+                  fill: rgb(183 53 17);
+                }
+              `}</style>
             </a>
           </Link>
         </div>
@@ -119,9 +144,7 @@ export const Header = () => {
 
           <Link href="/orcamento">
             <a className="mt-6 lg:mt-0">
-              <button className="w-60 py-2 bg-brand-500 text-white rounded-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-brand-500 hover:shadow-xl">
-                Solicitar orçamento
-              </button>
+              <Button variant="budget" />
             </a>
           </Link>
         </nav>

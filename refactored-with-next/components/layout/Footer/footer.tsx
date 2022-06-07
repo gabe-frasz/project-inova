@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className="text-brand-900 text-[12px] lg:text-sm">
-      <div className="container mx-auto px-1 py-4 text-center">
+      <div className="container mx-auto px-4 py-4 text-center">
         <div className="mb-6 flex flex-col-reverse lg:flex-row justify-center items-center">
           <div className="flex items-center">
             <h2 className="mr-4 pr-4 lg:leading-[50px] text-base lg:text-3xl text-neutral-800 border-r-[3px] border-black">
