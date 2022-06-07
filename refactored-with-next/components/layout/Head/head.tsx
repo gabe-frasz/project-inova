@@ -38,16 +38,17 @@ export const MyHead = () => {
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>{title}</title>
-      <link rel="shortcut icon" href="favicon.ico" type="image/png" />
+
+      <link rel="shortcut icon" href="favicon.png" type="image/png" />
       <link
         rel="apple-touch-icon"
         sizes="57x57"
-        href="icons/Applefiveicon 57.png"
+        href="icons/touch-icon-57.png"
       />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="icons/Applefiveicon 180.png"
+        href="icons/touch-icon-180.png"
       />
     </Head>
   );
