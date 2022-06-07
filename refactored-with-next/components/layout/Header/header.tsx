@@ -1,15 +1,21 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export const Header = () => {
   const router = useRouter();
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  function toggleNavbar() {
+    setIsNavbarOpen(!isNavbarOpen);
+  }
 
   return (
     <header>
       <div className="container mx-auto px-1 py-4 flex justify-between lg:justify-start items-center">
-        <div className="mr-6 pr-6 border-r-[3px] border-black">
+        <div className="mr-6 pr-6 lg:border-r-[3px] border-black">
           <Link href="/">
-            <a className="w-[200px] block">
+            <a className="w-[50vw] max-w-[200px] block">
               <svg viewBox="0 0 509 103" className="w-full">
                 <path d="M2.59716 1.33567H17.6607C19.0706 1.33567 20.2579 2.52295 20.2579 3.93284V98.1727C20.2579 99.5826 19.0706 100.77 17.6607 100.77H2.59716C1.18727 100.77 0 99.5826 0 98.1727V3.93284C0 2.52295 1.18727 1.33567 2.59716 1.33567Z" />
                 <path d="M272.405 30.2013C269.66 23.9681 265.801 18.6254 260.755 14.0989C255.783 9.6466 249.773 6.15898 242.798 3.71023C235.822 1.26148 228.031 0 219.646 0C211.186 0 203.395 1.26148 196.42 3.71023C189.444 6.15898 183.434 9.6466 178.462 14.0989C173.49 18.5512 169.632 23.8939 166.812 30.2013C164.066 36.4345 162.657 43.3355 162.657 50.8302C162.657 58.399 164.066 65.3 166.812 71.6074C169.558 77.9148 173.416 83.3318 178.462 87.8583C183.434 92.3847 189.444 95.9466 196.42 98.4695C203.395 100.992 211.112 102.254 219.646 102.254C228.105 102.254 235.822 100.992 242.798 98.4695C249.773 95.9466 255.783 92.3847 260.755 87.8583C265.727 83.3318 269.585 77.9148 272.405 71.6074C275.151 65.3 276.561 58.399 276.561 50.8302C276.486 43.2613 275.151 36.4345 272.405 30.2013ZM253.483 64.7064C251.628 68.8619 249.031 72.3495 245.766 75.2435C242.501 78.1375 238.642 80.3636 234.116 81.9219C229.663 83.4802 224.766 84.2964 219.497 84.2964C214.229 84.2964 209.331 83.4802 204.879 81.9219C200.427 80.3636 196.494 78.1375 193.229 75.2435C189.964 72.3495 187.367 68.8619 185.512 64.7064C183.656 60.551 182.766 55.9503 182.766 50.8302C182.766 45.71 183.656 41.1094 185.512 37.0281C187.367 32.9468 189.89 29.5334 193.229 26.7137C196.494 23.8939 200.427 21.7419 204.879 20.2579C209.331 18.7738 214.229 18.0317 219.497 18.0317C224.766 18.0317 229.589 18.7738 234.116 20.2579C238.568 21.7419 242.501 23.8939 245.766 26.7137C249.031 29.5334 251.628 32.9468 253.483 37.0281C255.338 41.1094 256.303 45.71 256.303 50.8302C256.303 55.9503 255.412 60.551 253.483 64.7064Z" />
@@ -21,10 +27,47 @@ export const Header = () => {
           </Link>
         </div>
 
-        <div className="w-8 aspect-square lg:hidden"></div>
+        <div
+          onClick={toggleNavbar}
+          className={`${
+            isNavbarOpen ? "active" : ""
+          } relative w-8 h-6 lg:hidden cursor-pointer z-20`}
+        >
+          <style jsx>{`
+            div::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 3px;
+              background: black;
+              box-shadow: 0px 10px 0px black;
+              transition: all 0.3s ease;
+            }
+            div::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 3px;
+              bottom: 0;
+              background: black;
+              transition: all 0.3s ease;
+            }
+            div.active::before {
+              transform: translateY(12px) rotate(45deg);
+              box-shadow: none;
+            }
+            div.active::after {
+              transform: translateY(-8px) rotate(-45deg);
+            }
+          `}</style>
+        </div>
 
-        <nav className="flex-1 flex justify-between items-center">
-          <ul className="flex gap-6">
+        <nav
+          className={`flex-1 fixed lg:relative w-screen h-screen top-0 ${
+            isNavbarOpen ? "left-0" : "left-full"
+          } lg:w-auto lg:h-auto lg:left-0 flex flex-col lg:flex-row justify-center lg:justify-between items-center bg-white lg:bg-transparent transition-all z-10`}
+        >
+          <ul className="flex flex-col lg:flex-row gap-6 text-center">
             {router.pathname != "/" && (
               <li>
                 <Link href="/">
@@ -39,47 +82,43 @@ export const Header = () => {
               </Link>
             </li>
 
-            {/* <li>
-              {
-                router.pathname != "/" && (
-              }
-              
+            <li>
               <Link href="/#servicos">
                 <a>Serviços</a>
               </Link>
-            </li> */}
+            </li>
 
             <li>
               <Link href="/sobre">
                 <a>Sobre</a>
               </Link>
             </li>
+
+            <style jsx>{`
+              li {
+                position: relative;
+              }
+
+              li::after {
+                content: "";
+                width: 0;
+                height: 4px;
+                display: block;
+                position: absolute;
+                bottom: 6px;
+                background-color: #db360966;
+                transition: all 0.3s ease;
+                pointer-events: none;
+              }
+
+              li:hover::after {
+                width: 100%;
+              }
+            `}</style>
           </ul>
 
-          <style jsx>{`
-            li {
-              position: relative;
-            }
-
-            li::after {
-              content: "";
-              width: 0;
-              height: 4px;
-              display: block;
-              position: absolute;
-              bottom: 6px;
-              background-color: #db360966;
-              transition: all 0.3s ease;
-              pointer-events: none;
-            }
-
-            li:hover::after {
-              width: 100%;
-            }
-          `}</style>
-
           <Link href="/orcamento">
-            <a>
+            <a className="mt-6 lg:mt-0">
               <button className="w-60 py-2 bg-brand-500 text-white rounded-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-brand-500 hover:shadow-xl">
                 Solicitar orçamento
               </button>
