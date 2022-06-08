@@ -11,9 +11,13 @@ export const Header = () => {
     setIsNavbarOpen(!isNavbarOpen);
   }
 
+  function closeNavbar() {
+    setIsNavbarOpen(false);
+  }
+
   return (
     <header>
-      <div className="container mx-auto px-4 py-4 flex justify-between lg:justify-start items-center">
+      <div className="container mx-auto px-4 py-6 flex justify-between lg:justify-start items-center">
         <div className="mr-6 pr-6 lg:border-r-[3px] border-black">
           <Link href="/">
             <a className="w-[50vw] max-w-[200px] block">
@@ -45,7 +49,7 @@ export const Header = () => {
                   transition-delay: 0.05s;
                 }
                 svg:hover path {
-                  fill: rgb(183 53 17);
+                  fill: rgb(219 54 9);
                 }
               `}</style>
             </a>
@@ -96,26 +100,26 @@ export const Header = () => {
             {router.pathname != "/" && (
               <li>
                 <Link href="/">
-                  <a>Início</a>
+                  <a onClick={closeNavbar}>Início</a>
                 </Link>
               </li>
             )}
 
             <li>
               <Link href="/contato">
-                <a>Contato</a>
+                <a onClick={closeNavbar}>Contato</a>
               </Link>
             </li>
 
             <li>
-              <Link href="/#servicos">
-                <a>Serviços</a>
+              <Link href="/#servicos" scroll={false}>
+                <a onClick={closeNavbar}>Serviços</a>
               </Link>
             </li>
 
             <li>
               <Link href="/sobre">
-                <a>Sobre</a>
+                <a onClick={closeNavbar}>Sobre</a>
               </Link>
             </li>
 
@@ -143,7 +147,7 @@ export const Header = () => {
           </ul>
 
           <Link href="/orcamento">
-            <a className="mt-6 lg:mt-0">
+            <a onClick={closeNavbar} className="mt-6 lg:mt-0">
               <Button variant="budget" />
             </a>
           </Link>
