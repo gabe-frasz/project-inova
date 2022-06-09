@@ -1,6 +1,9 @@
+import { ServicesType } from "@/types";
+import { ServiceCard } from "@components/modules";
 import { Button } from "@components/widgets";
 import type { NextPage } from "next";
 import Link from "next/link";
+import data from "../public/data.json";
 
 const Home: NextPage = () => {
   return (
@@ -43,7 +46,11 @@ const Home: NextPage = () => {
             Veja os serviços oferecidos pela INOVA.
           </p>
 
-          <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+          <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {data.services.map((service) => (
+              <ServiceCard key={service.id} {...(service as ServicesType)} />
+            ))}
+          </div>
 
           <Button variant="view-more" reverse />
         </div>
