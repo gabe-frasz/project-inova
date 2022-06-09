@@ -3,9 +3,16 @@ import { ServiceCard } from "@components/modules";
 import { Button } from "@components/widgets";
 import type { NextPage } from "next";
 import Link from "next/link";
+import { useState } from "react";
 import data from "../public/data.json";
 
 const Home: NextPage = () => {
+  const [showMoreServices, setShowMoreServices] = useState(false);
+
+  function toggleButton() {
+    setShowMoreServices(!showMoreServices);
+  }
+
   return (
     <>
       <section>
@@ -46,13 +53,35 @@ const Home: NextPage = () => {
             Veja os serviços oferecidos pela INOVA.
           </p>
 
-          <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {data.services.map((service) => (
-              <ServiceCard key={service.id} {...(service as ServicesType)} />
-            ))}
+          <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+            {data.services.map((service, index) => {
+              if (index < 3)
+                return (
+                  <ServiceCard
+                    key={service.id}
+                    {...(service as ServicesType)}
+                  />
+                );
+            })}
+
+            {data.services.map((service, index) => {
+              if (index >= 3)
+                return (
+                  <ServiceCard
+                    key={service.id}
+                    {...(service as ServicesType)}
+                    hidden={!showMoreServices}
+                  />
+                );
+            })}
           </div>
 
-          <Button variant="view-more" reverse />
+          <Button
+            variant="view-more"
+            reverse
+            toggleButton={toggleButton}
+            showMore={showMoreServices}
+          />
         </div>
       </section>
 
