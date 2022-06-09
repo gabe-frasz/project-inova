@@ -17,10 +17,16 @@
     "baseUrl": ".",
     "paths": {
       "@components/layout": ["components/layout"],
+      "@components/modules": ["components/modules"],
       "@components/widgets": ["components/widgets"],
       "@/types": ["core/types"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/servicos/[serviceId]"
+  ],
   "exclude": ["node_modules"]
 }
