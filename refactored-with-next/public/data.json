@@ -1,8 +1,9 @@
 {
   "services": [
     {
+      "id": 1,
       "name": "Limpeza de fachadas",
-      "image": "/public/images/limpeza-de-fachadas.jpg",
+      "image": "/images/limpeza-de-fachadas.jpg",
       "details": [
         "Hidrojateamento de fachadas",
         "Limpeza de pastilhas",
@@ -15,8 +16,9 @@
       ]
     },
     {
+      "id": 2,
       "name": "Limpeza de vidros",
-      "image": "/public/images/limpeza-de-vidros.jpg",
+      "image": "/images/limpeza-de-vidros.jpg",
       "details": [
         "Limpeza de vidros em altura",
         "Limpeza geral de vidros",
@@ -27,8 +29,9 @@
       ]
     },
     {
+      "id": 3,
       "name": "Vedação e calafetação",
-      "image": "/public/images/vedacao-e-calafetação.jpg",
+      "image": "/images/vedacao-e-calafetacao.jpg",
       "details": [
         "Vedação de pele de vidro",
         "Vedação de fachadas com vidros",
@@ -40,8 +43,9 @@
       ]
     },
     {
+      "id": 4,
       "name": "Pinturas prediais",
-      "image": "/public/images/pinturas-prediais.jpg",
+      "image": "/images/pinturas-prediais.jpg",
       "details": [
         "Aplicação de fundo preparador",
         "Aplicação de primer de aderência",
@@ -54,8 +58,9 @@
       ]
     },
     {
+      "id": 5,
       "name": "Equipamentos e instalações",
-      "image": "/public/images/equipamentos-e-instalações.jpg",
+      "image": "/images/equipamentos-e-instalacoes.jpg",
       "details": [
         "Pintura de tanque e tubulações",
         "Pintura de estruturas metálicas e escadas",
@@ -63,8 +68,9 @@
       ]
     },
     {
+      "id": 6,
       "name": "Outros serviços",
-      "image": "/public/images/outros-servicos.jpg",
+      "image": "/images/outros-servicos.jpg",
       "details": [
         {
           "Trabalhos em espaços confinados": [
