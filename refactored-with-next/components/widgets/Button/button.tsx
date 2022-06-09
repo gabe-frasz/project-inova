@@ -1,4 +1,5 @@
 import { ButtonType } from "@/types";
+import { ButtonHTMLAttributes } from "react";
 
 export const Button = ({
   variant,
@@ -6,11 +7,13 @@ export const Button = ({
   toggleButton,
   showMore,
   customClass,
-}: ButtonType) => {
+  ...props
+}: ButtonType & ButtonHTMLAttributes<HTMLButtonElement>) => {
   if (variant === "view-more") {
     return (
       <button
         onClick={toggleButton}
+        {...props}
         className={`w-60 py-2 ${
           reverse
             ? "bg-white text-black hover:text-brand-500"
@@ -24,6 +27,7 @@ export const Button = ({
 
   return (
     <button
+      {...props}
       className={`w-60 py-2 ${
         reverse
           ? "bg-white text-black hover:text-brand-500"
