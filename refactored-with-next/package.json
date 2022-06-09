@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "merge": "git switch main && git merge dev && git push && git switch dev"
+    "merge": "git switch master && git merge dev && git push && git switch dev"
   },
   "dependencies": {
     "next": "12.1.6",
