@@ -146,11 +146,13 @@ export const Header = () => {
             `}</style>
           </ul>
 
-          <Link href="/orcamento">
-            <a onClick={closeNavbar} className="mt-6 lg:mt-0">
-              <Button variant="budget" />
-            </a>
-          </Link>
+          {router.pathname != "/orcamento" && (
+            <Link href="/orcamento">
+              <a onClick={closeNavbar} className="mt-6 lg:mt-0">
+                <Button variant="budget" />
+              </a>
+            </Link>
+          )}
         </nav>
       </div>
     </header>
