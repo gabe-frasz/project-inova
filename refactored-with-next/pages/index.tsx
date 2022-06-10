@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         `}</style>
       </section>
 
-      <section className="-mt-16 lg:-mt-10 pt-28 pb-20 bg-brand-500 text-white text-center rounded-t-[50px]">
+      <section className="-mt-16 pt-28 pb-20 bg-brand-500 text-white text-center rounded-t-[50px]">
         <div className="container mx-auto px-4">
           <h2 id="servicos" className="mb-3 text-lg lg:text-4xl">
             Serviços
