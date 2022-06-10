@@ -1,0 +1,85 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "Limpeza de fachadas",
+      "image": "/images/limpeza-de-fachadas.jpg",
+      "details": [
+        "Hidrojateamento de fachadas",
+        "Limpeza de pastilhas",
+        "Limpeza de placas alucobond (acm)",
+        "Lavagem de fachadas com tijolinhos",
+        "Limpeza de fachadas de cerâmica",
+        "Lavagem de concreto aparente",
+        "Limpeza de fachada com pedras",
+        "Limpeza após obra de fachadas"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Limpeza de vidros",
+      "image": "/images/limpeza-de-vidros.jpg",
+      "details": [
+        "Limpeza de vidros em altura",
+        "Limpeza geral de vidros",
+        "Limpeza de pele de vidro",
+        "Limpeza de janelas e caixilhos",
+        "Limpeza de cúpulas de vidro",
+        "Limpeza de coberturas de vidro"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Vedação e calafetação",
+      "image": "/images/vedacao-e-calafetacao.jpg",
+      "details": [
+        "Vedação de pele de vidro",
+        "Vedação de fachadas com vidros",
+        "Vedação de coberturas em geral",
+        "Calafetação de rufos e calhas",
+        "Renovação de juntas de dilatação",
+        "Correção de infiltrações",
+        "Calafetação de fachada"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Pinturas prediais",
+      "image": "/images/pinturas-prediais.jpg",
+      "details": [
+        "Aplicação de fundo preparador",
+        "Aplicação de primer de aderência",
+        "Aplicação de selador acrílico",
+        "Aplicação de impermeabilizante",
+        "Aplicação de tinta acrílica",
+        "Aplicação de silicone hidro-repelente",
+        "Aplicação de resina acrílica",
+        "Aplicação de verniz acrílico"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Equipamentos e instalações",
+      "image": "/images/equipamentos-e-instalacoes.jpg",
+      "details": [
+        "Pintura de tanque e tubulações",
+        "Pintura de estruturas metálicas e escadas",
+        "Equipamentos industriais em geral"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Outros serviços",
+      "image": "/images/outros-servicos.jpg",
+      "details": [
+        {
+          "Trabalhos em espaços confinados": [
+            "Lavagem em altura (caixas d'água, silos)",
+            "Dutos de ar e elevadores"
+          ]
+        },
+        { "Instalação de para-raios": ["Proteção SPDA", "Instalação de DPS"] }
+      ]
+    }
+  ]
+}
