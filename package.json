@@ -1,0 +1,50 @@
+{
+  "name": "project-inova",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "lint": "next lint",
+    "format": "npx prettier -w ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slycooper-n/project-inova.git"
+  },
+  "keywords": [],
+  "author": "Gabriel VS Frasão <gabrielvitor.frasao@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slycooper-n/project-inova/issues"
+  },
+  "homepage": "https://github.com/slycooper-n/project-inova#readme",
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.1",
+    "@radix-ui/react-visually-hidden": "^1.0.1",
+    "@splidejs/react-splide": "^0.7.12",
+    "blurhash": "^2.0.4",
+    "clsx": "^1.2.1",
+    "next": "^13.0.0",
+    "react": "^18.2.0",
+    "react-blurhash": "^0.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "autoprefixer": "^10.4.13",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.26.0",
+    "eslint-config-next": "^13.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.2.1",
+    "typescript": "^4.8.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  width: 0.75rem; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #0f121a; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: gray; /* color of the scroll thumb */
+  border-radius: 2rem; /* roundness of the scroll thumb */
+}
