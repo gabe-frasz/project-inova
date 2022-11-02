@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+import { Head } from "@components/config";
 import { Container } from "@components/layouts";
 import { Button, Heading, SliderArrow, Text } from "@components/widgets";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
@@ -8,6 +10,8 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <>
+      <Head title="INOVA | Home" />
+
       <Container asChild>
         <main className="relative min-h-[700px] h-[calc(100vh-102px)] lg:h-[calc(100vh-120px)] flex flex-col justify-center bg-home-banner bg-cover bg-bottom overflow-x-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient z-0" />
@@ -25,7 +29,7 @@ const Home: NextPage = () => {
           </Text>
 
           <Button className="z-10" asChild>
-            <Link href="/orçamento">Solicitar orçamento</Link>
+            <Link href="/orcamento">Solicitar orçamento</Link>
           </Button>
         </main>
       </Container>
@@ -109,7 +113,7 @@ const Home: NextPage = () => {
           />
 
           <Button asChild>
-            <Link href="/orçamento">Solicitar orçamento</Link>
+            <Link href="/orcamento">Solicitar orçamento</Link>
           </Button>
         </section>
       </Container>

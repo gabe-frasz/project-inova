@@ -6,13 +6,13 @@ import Link from "next/link";
 export const Footer = () => {
   return (
     <Container asChild>
-      <footer className="min-h-[252px] lg:min-h-[268px] flex justify-center items-center lg:justify-between border-t-2 border-t-primary-500">
+      <footer className="relative min-h-[252px] lg:min-h-[268px] flex justify-center items-center lg:justify-between">
+        <div className="absolute top-0 left-[32px] lg:left-[100px] right-[32px] lg:right-[100px] h-0.5 bg-primary-500" />
+
         {/* logo and social icons */}
         <div className="lg:mr-auto flex flex-col items-center lg:items-start">
           <div className="flex flex-col lg:flex-row justify-center items-center">
-            <Link href="/" className="mb-6 lg:mr-6">
-              <Logo length="short" />
-            </Link>
+            <Logo length="short" className="mb-6 lg:mr-6" />
 
             <Text className="lg:max-w-[186px] mb-6 text-sm lg:text-sm text-center lg:text-start text-secondary-500 uppercase">
               Soluções inovadoras para sua empresa.
@@ -31,8 +31,15 @@ export const Footer = () => {
 
           <Text className="mt-5 hidden lg:block text-sm lg:text-sm">
             INOVA Copywriting 2022 - desenvolvido por{" "}
-            <a href="https://encestudio.com">Ence</a> e{" "}
-            <a href="https://www.linkedin.com/gabriel-vs-frasao">
+            <a href="https://encestudio.com" target="_blank" rel="noreferrer">
+              Ence
+            </a>{" "}
+            e{" "}
+            <a
+              href="https://www.linkedin.com/in/gabriel-vs-frasao"
+              target="_blank"
+              rel="noreferrer"
+            >
               Gabriel VS Frasão
             </a>
           </Text>

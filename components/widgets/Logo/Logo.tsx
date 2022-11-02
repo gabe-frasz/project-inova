@@ -1,4 +1,5 @@
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import c from "clsx";
 import Link from "next/link";
 import { SVGAttributes } from "react";
 
@@ -14,7 +15,10 @@ export const Logo = ({
   return (
     <Link
       href="/"
-      className="rounded focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-300 outline-none z-30"
+      className={c(
+        "rounded focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-300 outline-none z-30",
+        className,
+      )}
     >
       <VisuallyHidden>
         <h1>INOVA Alpin</h1>

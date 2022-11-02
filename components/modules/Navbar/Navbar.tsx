@@ -32,14 +32,17 @@ export const Navbar = () => {
           )}
         >
           {navbarOptions.map(({ name, href }) => (
-            <li key={name} className="uppercase">
+            <li
+              key={name}
+              className="hover:text-secondary-500 uppercase transition-colors"
+            >
               <Link href={href}>{name}</Link>
             </li>
           ))}
 
           <li>
             <Button variant="secondary" className="px-4 py-2 text-sm" asChild>
-              <Link href="/orçamento">Solicitar orçamento</Link>
+              <Link href="/orcamento">Solicitar orçamento</Link>
             </Button>
           </li>
         </ul>

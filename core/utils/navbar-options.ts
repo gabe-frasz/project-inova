@@ -9,10 +9,10 @@ export const navbarOptions = [
   },
   {
     name: "orçamento",
-    href: "",
+    href: "/orcamento",
   },
   {
     name: "sobre",
-    href: "",
+    href: "/sobre",
   },
 ];

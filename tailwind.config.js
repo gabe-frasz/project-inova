@@ -22,6 +22,10 @@ module.exports = {
         300: "#0F121A",
         content: "#FFFFFF",
       },
+
+      gray: {
+        800: "#262626",
+      },
     },
 
     extend: {
@@ -37,6 +41,7 @@ module.exports = {
           "linear-gradient(141.95deg, rgba(109, 137, 136, 0.8) -147.36%, rgba(15, 18, 26, 0.8) 67.08%)",
         "home-banner": "url('/images/home-banner.png')",
         "about-banner": "url('/images/about-banner.png')",
+        "budget-banner": "url('/images/budget-banner.png')",
       },
     },
   },

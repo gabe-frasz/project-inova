@@ -6,10 +6,6 @@ export default function Document() {
     <Html lang="pt-BR">
       <Head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="description"
-          content="Best Next.js template with bash scripts in the world"
-        />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -30,8 +26,8 @@ export default function Document() {
         />
         <link rel="apple-touch-icon" href="public/images/apple-icon-180.png" />
 
-        <meta name="theme-color" content="#6419e6" />
-        <meta name="apple-mobile-web-app-status-bar" content="#6419e6" />
+        <meta name="theme-color" content="#EB5E28" />
+        <meta name="apple-mobile-web-app-status-bar" content="#EB5E28" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
         <Script
