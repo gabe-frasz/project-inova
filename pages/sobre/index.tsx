@@ -104,7 +104,7 @@ const About: NextPage = () => {
           </div>
 
           <Button asChild>
-            <a href="https://instagram.com/">Instagram INOVA</a>
+            <a href="https://www.instagram.com/inovaalpin">Instagram INOVA</a>
           </Button>
         </section>
       </Container>

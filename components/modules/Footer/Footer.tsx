@@ -20,13 +20,17 @@ export const Footer = () => {
           </div>
 
           <div className="flex gap-5">
-            <Link href="">
+            <a href="" target="_blank" rel="noreferrer">
               <SocialIcon type="facebook" />
-            </Link>
+            </a>
 
-            <Link href="">
+            <a
+              href="https://www.instagram.com/inovaalpin"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SocialIcon type="instagram" />
-            </Link>
+            </a>
           </div>
 
           <Text className="mt-5 hidden lg:block text-sm lg:text-sm">

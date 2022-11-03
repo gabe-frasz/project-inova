@@ -27,9 +27,9 @@ const Budget: NextPage = () => {
 
         <Container asChild>
           <main className="flex-1 pt-12 flex flex-col justify-center">
-            <Text className="lg:hidden mb-6 text-secondary-500 leading-[48px]">
+            <Heading className="lg:hidden mb-6 text-secondary-500 leading-[48px]">
               Encontre suas soluções
-            </Text>
+            </Heading>
 
             <Text className="lg:hidden" asChild>
               <p>

@@ -16,11 +16,11 @@ const Home: NextPage = () => {
         <main className="relative min-h-[700px] h-[calc(100vh-102px)] lg:h-[calc(100vh-120px)] flex flex-col justify-center bg-home-banner bg-cover bg-bottom overflow-x-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient z-0" />
 
-          <Heading className="mb-6 text-secondary-500 z-10">
+          <Heading className="max-w-[649px] mb-6 text-secondary-500 z-10">
             Soluções inovadoras para sua empresa.
           </Heading>
 
-          <Text className="mb-12 z-10" asChild>
+          <Text className="max-w-[649px] mb-12 z-10" asChild>
             <p>
               A <strong className="font-medium uppercase">INOVA</strong> é uma
               empresa de trabalhos em altura, com tecnologias e estratégias que
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             </p>
           </Text>
 
-          <Button className="z-10" asChild>
+          <Button className="block lg:hidden z-10" asChild>
             <Link href="/orcamento">Solicitar orçamento</Link>
           </Button>
         </main>

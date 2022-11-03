@@ -17,7 +17,7 @@ export const MenuToggler = ({
         viewBox="0 0 31 30"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={c("xl:hidden transition-transform duration-300", {
+        className={c("lg:hidden transition-transform duration-300", {
           "rotate-90": isMobileMenuOpen,
         })}
       >

@@ -1,9 +1,5 @@
 export const navbarOptions = [
   {
-    name: "trabalhos",
-    href: "",
-  },
-  {
     name: "serviços",
     href: "",
   },
