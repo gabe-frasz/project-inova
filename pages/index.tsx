@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Head } from "@components/config";
 import { Container } from "@components/layouts";
+import { ServiceModal } from "@components/modules";
 import { Button, Heading, SliderArrow, Text } from "@components/widgets";
+import { servicesInfo } from "@core/utils";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import { NextPage } from "next";
@@ -35,7 +37,10 @@ const Home: NextPage = () => {
       </Container>
 
       <Container asChild>
-        <section className="min-h-[476px] lg:min-h-[893px] flex flex-col justify-center items-center">
+        <section
+          id="servicos"
+          className="min-h-[476px] lg:min-h-[893px] py-8 flex flex-col justify-center items-center"
+        >
           <Heading className="mb-6 text-secondary-500">Serviços</Heading>
 
           <Text className="mb-24 text-center">
@@ -44,22 +49,36 @@ const Home: NextPage = () => {
 
           <Splide
             hasTrack={false}
-            options={{ drag: true, width: "100%" }}
+            options={{
+              gap: 20,
+              breakpoints: {
+                1280: { perPage: 2, perMove: 2 },
+                768: { perPage: 1, perMove: 1 },
+              },
+              perPage: 3,
+              perMove: 3,
+            }}
             className="w-full flex"
           >
-            <div className="splide__arrows">
+            <div className="splide__arrows flex items-center">
               <button className="splide__arrow splide__arrow--prev">
                 <SliderArrow direction="left" />
               </button>
             </div>
 
-            <SplideTrack className="flex-1">
-              <SplideSlide>ai toma</SplideSlide>
-
-              <SplideSlide>ai toma dnv</SplideSlide>
+            <SplideTrack className="flex-1 p-20">
+              {servicesInfo.map(({ id, ...props }) => (
+                <SplideSlide key={id}>
+                  <ServiceModal
+                    title={props.title}
+                    description={props.description}
+                    imageUrl={props.imageUrl}
+                  />
+                </SplideSlide>
+              ))}
             </SplideTrack>
 
-            <div className="splide__arrows">
+            <div className="splide__arrows flex items-center">
               <button className="splide__arrow splide__arrow--next">
                 <SliderArrow direction="right" />
               </button>
@@ -69,7 +88,7 @@ const Home: NextPage = () => {
       </Container>
 
       <Container asChild>
-        <section className="relative min-h-[514px] lg:min-h-[609px] flex flex-col justify-center lg:items-end bg-about-banner bg-bottom">
+        <section className="relative min-h-[514px] lg:min-h-[609px] flex flex-col justify-center lg:items-end bg-about-banner bg-cover bg-no-repeat bg-bottom">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient z-0" />
 
           <div className="max-w-[397px] text-start z-10">

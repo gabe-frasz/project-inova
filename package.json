@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/slycooper-n/project-inova#readme",
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.2",
     "@radix-ui/react-slot": "^1.0.1",
     "@radix-ui/react-visually-hidden": "^1.0.1",
     "@splidejs/react-splide": "^0.7.12",
