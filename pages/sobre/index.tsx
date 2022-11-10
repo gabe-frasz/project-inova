@@ -63,11 +63,12 @@ const About: NextPage = () => {
             autoplay: true,
             breakpoints: {
               1024: {
-                gap: 50,
+                gap: 32,
               },
             },
+            drag: false,
             easing: "linear",
-            gap: 32,
+            gap: 50,
             interval: 0,
             perPage: 4,
             perMove: 1,
