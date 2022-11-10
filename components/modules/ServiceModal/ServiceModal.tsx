@@ -42,7 +42,7 @@ export const ServiceModal = ({
           <div className="relative mb-6 lg:mb-12 px-1 pl-6 py-3 lg:pl-10 lg:py-5">
             <div className="absolute top-3 left-2 w-[10px] h-[calc(100%-24px)] lg:w-5 bg-primary-500" />
 
-            <Text className="text-primary-500 text-[8px] font-semibold uppercase">
+            <Text className="text-primary-500 font-semibold uppercase">
               {title}
             </Text>
           </div>
