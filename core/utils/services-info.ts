@@ -51,7 +51,8 @@ export const servicesInfo: ServiceInfo[] = [
   {
     id: 7,
     title: "Instalação de linha de vida e ponto de ancoragem",
-    description: "",
+    description:
+      "A Linha de Vida é um equipamento fundamental para a segurança dos colaboradores que atuam no Trabalho em Altura. Isso porque permite que o trabalhador se locomova em segurança mesmo que esteja a mais de dois metros de altura do chão.",
     imageUrl:
       "/images/service-instalacao-de-linha-de-vida-e-ponto-de-ancoragem.png",
   },
