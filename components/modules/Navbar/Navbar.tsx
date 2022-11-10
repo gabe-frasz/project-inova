@@ -9,7 +9,20 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function toggleMenu() {
-    setIsMobileMenuOpen((prev) => !prev);
+    setIsMobileMenuOpen((prev) => {
+      if (prev) {
+        document &&
+          document.body.classList.remove(
+            "overflow-y-hidden",
+            "lg:overflow-y-auto",
+          );
+        return !prev;
+      }
+
+      document &&
+        document.body.classList.add("overflow-y-hidden", "lg:overflow-y-auto");
+      return !prev;
+    });
   }
 
   return (
