@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Text } from "@components/widgets";
+import { MenuToggler, Text } from "@components/widgets";
 import * as PrimitiveDialog from "@radix-ui/react-dialog";
 
 interface ServiceModalProps {
@@ -62,8 +62,11 @@ export const ServiceModal = ({
           className="w-full h-[123px] lg:h-[246px] object-cover"
         />
 
-        <PrimitiveDialog.Close className="absolute top-5 right-5 px-2 text-primary-500 rounded-full border-2 border-transparent outline-none focus:border-primary-500">
-          X
+        <PrimitiveDialog.Close className="absolute top-5 right-5 p-0.5 text-primary-500 border-4 border-transparent outline-none focus:border-primary-500">
+          <MenuToggler
+            isMobileMenuOpen={true}
+            className="lg:block outline-none"
+          />
         </PrimitiveDialog.Close>
       </PrimitiveDialog.Content>
     </PrimitiveDialog.Portal>

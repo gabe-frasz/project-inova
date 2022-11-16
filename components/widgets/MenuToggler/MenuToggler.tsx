@@ -10,14 +10,14 @@ export const MenuToggler = ({
   ...props
 }: MenuTogglerProps) => {
   return (
-    <button {...props} className="z-30">
+    <button className="lg:hidden z-30" {...props}>
       <svg
         width="31"
         height="30"
         viewBox="0 0 31 30"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={c("lg:hidden transition-transform duration-300", {
+        className={c("transition-transform duration-300", {
           "rotate-90": isMobileMenuOpen,
         })}
       >
