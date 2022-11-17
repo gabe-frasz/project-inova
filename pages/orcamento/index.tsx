@@ -8,7 +8,7 @@ const Budget: NextPage = () => {
     <>
       <Head title="INOVA | Orçamento" />
 
-      <div className="max-w-[1920px] min-h-[calc(100vh-120px)] mx-auto mb-12 flex">
+      <div className="max-w-[1920px] min-h-[calc(100vh-120px)] mx-auto mb-24 flex">
         <section className="relative flex-[1.4] hidden lg:block bg-budget-banner bg-cover bg-no-repeat">
           <Container className="absolute top-0 left-0 w-full h-full bg-gradient z-0">
             <Heading className="mt-28 mb-6 text-secondary-500 z-10">
@@ -26,7 +26,7 @@ const Budget: NextPage = () => {
         </section>
 
         <Container asChild>
-          <main className="flex-1 lg:mb-20 pt-12 flex flex-col justify-center">
+          <main className="flex-1 pt-12 flex flex-col justify-center">
             <Heading className="lg:hidden mb-6 text-secondary-500 leading-[48px]">
               Encontre suas soluções
             </Heading>
