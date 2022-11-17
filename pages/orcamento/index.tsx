@@ -26,7 +26,7 @@ const Budget: NextPage = () => {
         </section>
 
         <Container asChild>
-          <main className="flex-1 pt-12 flex flex-col justify-center">
+          <main className="flex-1 lg:mb-20 pt-12 flex flex-col justify-center">
             <Heading className="lg:hidden mb-6 text-secondary-500 leading-[48px]">
               Encontre suas soluções
             </Heading>
@@ -45,7 +45,7 @@ const Budget: NextPage = () => {
               </h2>
             </Text>
 
-            <form action="" className="py-14 lg:py-40 flex flex-col gap-[10px]">
+            <form action="" className="py-14 flex flex-col gap-[10px]">
               <InputField.Root>
                 <InputField.Label>Nome</InputField.Label>
 
