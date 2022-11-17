@@ -13,13 +13,7 @@ export const Logo = ({
   ...props
 }: LogoProps) => {
   return (
-    <Link
-      href="/"
-      className={c(
-        "rounded focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-300 outline-none z-30",
-        className,
-      )}
-    >
+    <Link href="/" className={c("outline-none z-30", className)}>
       <VisuallyHidden>
         <h1>INOVA Alpin</h1>
       </VisuallyHidden>

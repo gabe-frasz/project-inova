@@ -11,6 +11,5 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: gray; /* color of the scroll thumb */
-  border-radius: 2rem; /* roundness of the scroll thumb */
+  background-color: #eb5e28; /* color of the scroll thumb */
 }

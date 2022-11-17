@@ -45,7 +45,7 @@ const Budget: NextPage = () => {
               </h2>
             </Text>
 
-            <form action="" className="py-14 flex flex-col gap-[10px]">
+            <form action="" className="py-14 lg:py-40 flex flex-col gap-[10px]">
               <InputField.Root>
                 <InputField.Label>Nome</InputField.Label>
 
