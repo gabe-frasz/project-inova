@@ -15,18 +15,18 @@ export const ServiceModal = ({
 }: ServiceModalProps) => (
   <PrimitiveDialog.Root>
     <PrimitiveDialog.Trigger asChild>
-      <figure className="relative w-[183px] lg:w-[340px] mx-auto bg-white transition-all hover:scale-[1.03] cursor-pointer">
+      <figure className="relative w-[183px] lg:w-[340px] aspect-square mx-auto bg-white transition-all hover:scale-[1.03] cursor-pointer">
         <img
           src={imageUrl}
           alt={`Serviço INOVA - ${title}`}
-          className="w-full object-cover"
+          className="w-full h-full object-cover"
         />
 
         <figcaption className="absolute left-0 right-0 bottom-0">
-          <div className="relative px-1 pl-6 py-3 lg:pl-10 lg:py-5 bg-primary-500">
+          <div className="relative h-12 lg:h-16 px-1 pl-6 lg:pl-10 flex items-center bg-primary-500">
             <div className="absolute top-3 left-2 w-[10px] h-[calc(100%-24px)] lg:w-5 bg-base-300" />
 
-            <Text className="text-primary-content text-[8px] font-semibold uppercase">
+            <Text className="text-primary-content text-[8px] leading-3 font-semibold uppercase">
               {title}
             </Text>
           </div>
