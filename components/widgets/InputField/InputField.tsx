@@ -2,6 +2,8 @@ import {
   HTMLAttributes,
   InputHTMLAttributes,
   LabelHTMLAttributes,
+  OptionHTMLAttributes,
+  SelectHTMLAttributes,
   TextareaHTMLAttributes,
 } from "react";
 import { Text } from "../Text";
@@ -51,9 +53,76 @@ const InputFielTextArea = ({ name, ...props }: InputFielTextArea) => {
   );
 };
 
+interface InputFieldSelectProps
+  extends SelectHTMLAttributes<HTMLSelectElement> {
+  name: string;
+}
+
+const InputFieldSelect = ({
+  name,
+  children,
+  ...props
+}: InputFieldSelectProps) => {
+  return (
+    <div className="relative group">
+      <select
+        name={name}
+        className="w-full px-2 py-1 lg:py-3 bg-gray-800 border border-white focus:border-primary-500 outline-none transition-colors appearance-none"
+        {...props}
+      >
+        {children}
+      </select>
+
+      <div className="absolute top-0 right-0 h-full aspect-square -rotate-90 pointer-events-none group-focus-within:rotate-90 transition-transform">
+        <svg
+          width="47"
+          height="47"
+          viewBox="0 0 47 47"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22.1289 30.3063L15.2074 23.3848L22.1289 16.4633"
+            stroke="white"
+            strokeWidth="3.16818"
+            strokeLinecap="square"
+            strokeLinejoin="bevel"
+          />
+          <path
+            d="M31.0488 23.3243H17.2058"
+            stroke="white"
+            strokeWidth="3.16818"
+            strokeLinecap="square"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+interface InputFieldOptionProps
+  extends OptionHTMLAttributes<HTMLOptionElement> {
+  value: string | number | readonly string[];
+}
+
+const InputFieldOption = ({
+  value,
+  children,
+  ...props
+}: InputFieldOptionProps) => {
+  return (
+    <option value={value} {...props}>
+      {children}
+    </option>
+  );
+};
+
 export const InputField = {
   Root: InputFieldRoot,
   Label: InputFieldLabel,
   Input: InputFieldInput,
   TextArea: InputFielTextArea,
+  Select: InputFieldSelect,
+  Option: InputFieldOption,
 };
