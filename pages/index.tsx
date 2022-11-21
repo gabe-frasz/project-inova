@@ -126,7 +126,7 @@ const Home: NextPage = () => {
           </Text>
 
           <img
-            src="/images/example-banner.png"
+            src="/images/service-limpeza-de-caixa-dagua.png"
             alt="banner - exemplo de serviço"
             className="w-full h-[292px] mb-12 hidden lg:block object-cover"
           />
