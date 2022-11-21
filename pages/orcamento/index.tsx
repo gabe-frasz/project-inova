@@ -1,6 +1,7 @@
 import { Head } from "@components/config";
 import { Container } from "@components/layouts";
 import { Button, Heading, InputField, Text } from "@components/widgets";
+import { servicesInfo } from "@core/utils";
 import { NextPage } from "next";
 
 const Budget: NextPage = () => {
@@ -45,7 +46,11 @@ const Budget: NextPage = () => {
               </h2>
             </Text>
 
-            <form action="" className="py-14 flex flex-col gap-[10px]">
+            <form
+              method="POST"
+              action=""
+              className="py-14 flex flex-col gap-[10px]"
+            >
               <InputField.Root>
                 <InputField.Label>Nome</InputField.Label>
 
@@ -75,7 +80,20 @@ const Budget: NextPage = () => {
               <InputField.Root>
                 <InputField.Label>Serviço</InputField.Label>
 
-                <InputField.Input type="text" name="serviço" required />
+                <InputField.Select name="serviço" required>
+                  <option selected disabled>
+                    Selecione um serviço
+                  </option>
+
+                  {servicesInfo.map(({ id, title }) => (
+                    <InputField.Option
+                      key={id}
+                      value={title.toLowerCase().replaceAll(" ", "-")}
+                    >
+                      {title}
+                    </InputField.Option>
+                  ))}
+                </InputField.Select>
               </InputField.Root>
 
               <InputField.Root className="mb-12">
