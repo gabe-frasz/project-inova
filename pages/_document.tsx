@@ -51,28 +51,29 @@ export default function Document() {
         <meta name="apple-mobile-web-app-status-bar" content="#EB5E28" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="INOVA" />
+        <meta
+          name="twitter:description"
+          content="A INOVA é uma empresa de trabalhos em altura, com tecnologias e estratégias que permitem uma inovadora solução."
+        />
         <meta name="twitter:image" content="/og-image-tw.png" />
+        <meta name="twitter:url" content="https://inovaalpin.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="INOVA" />
+        <meta
+          property="og:description"
+          content="A INOVA é uma empresa de trabalhos em altura, com tecnologias e estratégias que permitem uma inovadora solução."
+        />
+        <meta property="og:site_name" content="INOVA Alpin" />
         <meta property="og:image" content="/og-image-fb.png" />
+        <meta property="og:url" content="https://inovaalpin.com" />
 
         <Script
           crossOrigin="anonymous"
           strategy="beforeInteractive"
           src="https://polyfill.io/v3/polyfill.min.js"
         />
-
-        {/*
-            // opengraph meta tags
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:url" content="https://yourdomain.com" />
-            <meta name="twitter:title" content="Next.js template with bash scripts" />
-            <meta name="twitter:description" content="Best Next.js template with bash scripts in the world" />
-            <meta name="twitter:creator" content="@John_Doe" />
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content="Next.js template with bash scripts" />
-            <meta property="og:description" content="Best Next.js template with bash scripts in the world" />
-            <meta property="og:site_name" content="Next.js template with bash scripts" />
-            <meta property="og:url" content="https://yourdomain.com" />
-          */}
       </Head>
 
       <body className="w-full min-h-full bg-base-300 text-base-content font-sans font-medium overflow-x-hidden">
