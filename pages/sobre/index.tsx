@@ -2,6 +2,7 @@
 import { Head } from "@components/config";
 import { Container } from "@components/layouts";
 import { Button, Heading, Text } from "@components/widgets";
+import { aboutSliderImages } from "@core/utils";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import c from "clsx";
@@ -61,6 +62,7 @@ const About: NextPage = () => {
           options={{
             arrows: false,
             autoplay: true,
+            autoWidth: true,
             breakpoints: {
               1024: {
                 gap: 32,
@@ -69,70 +71,21 @@ const About: NextPage = () => {
             drag: false,
             easing: "linear",
             gap: 50,
-            interval: 0,
-            perPage: 4,
-            perMove: 1,
-            speed: 25000,
+            interval: 1000,
+            speed: 100000,
             type: "loop",
           }}
         >
-          <SplideTrack style={{ overflowX: "visible" }}>
-            <SplideSlide>
-              <img
-                src="/images/example-about-img.png"
-                alt="example image"
-                className="lg:w-[300px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="/images/example-about-img.png"
-                alt="example image"
-                className="lg:w-[300px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="/images/example-about-img.png"
-                alt="example image"
-                className="lg:w-[300px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="/images/example-about-img.png"
-                alt="example image"
-                className="lg:w-[300px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="/images/example-about-img.png"
-                alt="example image"
-                className="lg:w-[300px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="/images/example-about-img.png"
-                alt="example image"
-                className="lg:w-[300px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="/images/example-about-img.png"
-                alt="example image"
-                className="lg:w-[300px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <img
-                src="/images/example-about-img.png"
-                alt="example image"
-                className="lg:w-[300px]"
-              />
-            </SplideSlide>
+          <SplideTrack>
+            {aboutSliderImages.map(({ id, url }) => (
+              <SplideSlide key={id}>
+                <img
+                  src={url}
+                  alt="Serviços INOVA"
+                  className="w-[190px] h-[245px] lg:w-[300px] lg:h-[450px] object-cover"
+                />
+              </SplideSlide>
+            ))}
           </SplideTrack>
         </Splide>
       </section>
@@ -219,7 +172,7 @@ const About: NextPage = () => {
           </Text>
 
           <img
-            src="/images/example-banner.png"
+            src="/images/service-limpeza-de-caixa-dagua.png"
             alt="banner - exemplo de serviço"
             className="w-full h-[292px] mb-12 hidden lg:block object-cover"
           />
