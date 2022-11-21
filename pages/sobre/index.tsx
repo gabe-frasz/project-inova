@@ -115,7 +115,7 @@ const About: NextPage = () => {
             <ul>
               <li
                 className={c(
-                  "w-full mb-6 px-4 py-7 bg-primary-500 bg-primary-gradient-to-l",
+                  "w-full mb-6 px-4 py-7 bg-primary-500 bg-primary-gradient-to-l animate-dance",
                   "lg:absolute lg:top-[350px] lg:-right-1/4 lg:w-[570px] lg:bg-transparent lg:text-end",
                 )}
               >
@@ -133,7 +133,7 @@ const About: NextPage = () => {
 
               <li
                 className={c(
-                  "w-full px-4 py-7 bg-primary-500 bg-primary-gradient-to-r",
+                  "w-full px-4 py-7 bg-primary-500 bg-primary-gradient-to-r animate-dance animation-reverse animation-delay-500",
                   "lg:absolute lg:top-[950px] lg:-left-1/4 lg:w-[570px] lg:bg-transparent",
                 )}
               >
@@ -149,6 +149,34 @@ const About: NextPage = () => {
                   soluções em meio aos problemas de nossos clientes.
                 </Text>
               </li>
+
+              <style jsx>{`
+                .animate-dance {
+                  animation: dance 10s ease infinite;
+                }
+                .animation-reverse {
+                  animation-direction: reverse;
+                }
+                .animation-delay-500 {
+                  animation-delay: 500ms;
+                }
+
+                @keyframes dance {
+                  0%,
+                  100% {
+                    transform: translate(0px, 0px);
+                  }
+                  25% {
+                    transform: translate(5px, -10px);
+                  }
+                  50% {
+                    transform: translate(10px, 20px);
+                  }
+                  75% {
+                    transform: translate(-5px, -20px);
+                  }
+                }
+              `}</style>
             </ul>
           </figure>
 
