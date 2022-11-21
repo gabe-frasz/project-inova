@@ -4,6 +4,8 @@ import { Button, Heading, InputField, Text } from "@components/widgets";
 import { servicesInfo } from "@core/utils";
 import { NextPage } from "next";
 
+// TODO: FINSISH FORMS CONFIG
+
 const Budget: NextPage = () => {
   return (
     <>
@@ -47,10 +49,22 @@ const Budget: NextPage = () => {
             </Text>
 
             <form
+              action="https://formsubmit.co/contato@inovaalpin.com"
               method="POST"
-              action=""
               className="py-14 flex flex-col gap-[10px]"
             >
+              <header>
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Orçamento solicitado!"
+                />
+
+                <input type="hidden" name="_captcha" value="false" />
+
+                <input type="hidden" name="_template" value="box" />
+              </header>
+
               <InputField.Root>
                 <InputField.Label>Nome</InputField.Label>
 
