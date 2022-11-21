@@ -32,14 +32,14 @@ export const servicesInfo: ServiceInfo[] = [
     title: "SPDA",
     description:
       "Um Sistema de Proteção contra Descargas Atmosféricas (SPDA) tem por objetivo principal evitar a incidência direta de raios na estrutura a ser protegida, através da constituição de pontos preferenciais de incidência para as descargas que eventualmente atingiriam a estrutura na ausência do sistema.",
-    imageUrl: "/images/service-spda.png",
+    imageUrl: "/images/service-spda-e-manutencao-de-sistema-fotovoltaico.png",
   },
   {
     id: 5,
     title: "Manutenção de sistema fotovoltaico",
     description:
       "A manutenção preditiva do sistema de energia solar consiste no monitoramento da sua geração para possíveis quedas de desempenho e na inspeção visual dos equipamentos, incluindo o painel solar, inversor e string box, a fim de detectar precocemente indícios de danos, como arranhões, manchas ou rachaduras nas placas solares. Já a manutenção preventiva do sistema de energia solar engloba a limpeza periódica das placas solares, a higienização do inversor e uma inspeção completa de todos os componentes elétricos (módulos, inversor, string box e conectores) e mecânicos (suportes e estrutura de fixação) para otimizar o desempenho, identificar/reparar danos e prolongar a vida útil dos equipamentos.",
-    imageUrl: "/images/service-manutencao-de-sistema-fotovoltaico.png",
+    imageUrl: "/images/service-spda-e-manutencao-de-sistema-fotovoltaico.png",
   },
   {
     id: 6,
