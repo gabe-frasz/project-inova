@@ -115,7 +115,7 @@ const About: NextPage = () => {
             <ul>
               <li
                 className={c(
-                  "w-full mb-6 px-4 py-7 bg-primary-500 bg-primary-gradient-to-l lg:animate-dance",
+                  "w-full mb-6 px-4 py-7 bg-primary-500 bg-primary-gradient-to-l animate-dance",
                   "lg:absolute lg:top-[350px] lg:-right-1/4 lg:w-[570px] lg:bg-transparent lg:text-end",
                 )}
               >
@@ -133,7 +133,7 @@ const About: NextPage = () => {
 
               <li
                 className={c(
-                  "w-full px-4 py-7 bg-primary-500 bg-primary-gradient-to-r lg:animate-dance animation-reverse animation-delay-500",
+                  "w-full px-4 py-7 bg-primary-500 bg-primary-gradient-to-r animate-dance animation-reverse animation-delay-500",
                   "lg:absolute lg:top-[950px] lg:-left-1/4 lg:w-[570px] lg:bg-transparent",
                 )}
               >
@@ -151,8 +151,10 @@ const About: NextPage = () => {
               </li>
 
               <style jsx>{`
-                .animate-dance {
-                  animation: dance 10s ease infinite;
+                @media (min-width: 1024px) {
+                  .animate-dance {
+                    animation: dance 10s ease infinite;
+                  }
                 }
                 .animation-reverse {
                   animation-direction: reverse;
