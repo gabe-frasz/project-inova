@@ -39,8 +39,8 @@ export const ServiceModal = ({
 
       <PrimitiveDialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[656px] px-14 py-20 bg-white text-primary-content z-50">
         <PrimitiveDialog.Title asChild>
-          <div className="relative mb-6 lg:mb-12 px-1 pl-6 py-3 lg:pl-10 lg:py-5">
-            <div className="absolute top-3 left-2 w-[10px] h-[calc(100%-24px)] lg:w-5 bg-primary-500" />
+          <div className="relative mb-6 lg:mb-12 pl-4 py-3 lg:pl-8 lg:py-5">
+            <div className="absolute top-3 left-0 w-[10px] h-[calc(100%-24px)] lg:w-5 bg-primary-500" />
 
             <Text className="text-primary-500 font-semibold uppercase">
               {title}
@@ -62,7 +62,7 @@ export const ServiceModal = ({
           className="w-full h-[123px] lg:h-[246px] object-cover"
         />
 
-        <PrimitiveDialog.Close className="absolute top-5 right-5 p-0.5 text-primary-500 border-4 border-transparent outline-none focus:border-primary-500">
+        <PrimitiveDialog.Close className="absolute top-5 right-5 text-primary-500">
           <MenuToggler
             isMobileMenuOpen={true}
             className="lg:block outline-none"
