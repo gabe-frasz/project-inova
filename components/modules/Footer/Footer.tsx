@@ -93,9 +93,12 @@ export const Footer = () => {
             </Text>
 
             <Text asChild>
-              <h4 className="w-[238px] lg:text-[14px] uppercase">
+              <Link
+                href="/orcamento"
+                className="w-[238px] lg:text-[14px] uppercase hover:text-primary-500 transition-colors"
+              >
                 Entre em contato conosco para realizar um serviço!
-              </h4>
+              </Link>
             </Text>
           </div>
         </address>
