@@ -46,8 +46,8 @@ const About: NextPage = () => {
         </main>
       </Container>
 
-      <section className="min-h-[605px] lg:min-h-[800px] flex flex-col justify-center items-center bg-primary-500 overflow-x-hidden">
-        <Container className="mb-20 lg:mb-24 flex flex-col lg:flex-row lg:items-center lg:gap-36">
+      <section className="min-h-[605px] lg:min-h-[800px] flex flex-col justify-center bg-primary-500 overflow-x-hidden">
+        <Container className="w-full mb-20 lg:mb-24 flex flex-col lg:flex-row lg:justify-start lg:items-center lg:gap-36">
           <Heading className="mb-6 lg:mb-0 text-center">
             Trabalhos realizados
           </Heading>
