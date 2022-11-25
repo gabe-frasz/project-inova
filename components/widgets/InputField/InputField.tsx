@@ -73,13 +73,12 @@ const InputFieldSelect = ({
         {children}
       </select>
 
-      <div className="absolute top-0 right-0 h-full aspect-square -rotate-90 pointer-events-none group-focus-within:rotate-90 transition-transform">
+      <div className="absolute top-0 right-0 h-full aspect-square border-[6px] border-white pointer-events-none">
         <svg
-          width="47"
-          height="47"
           viewBox="0 0 47 47"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="-rotate-90 group-focus-within:rotate-90 transition-transform"
         >
           <path
             d="M22.1289 30.3063L15.2074 23.3848L22.1289 16.4633"
