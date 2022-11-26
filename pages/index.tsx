@@ -101,12 +101,10 @@ const Home: NextPage = () => {
                   <header className="h-[60px] mb-6 px-3 flex items-center gap-2 bg-base-300 text-white border-2 border-primary-500 rounded-tl-[5px] rounded-tr-[5px]">
                     <div className="w-[10px] h-6 bg-white" />
 
-                    <h3 className="text-xs leading-3 font-semibold uppercase">
-                      {title}
-                    </h3>
+                    <h3 className="text-sm font-semibold uppercase">{title}</h3>
                   </header>
 
-                  <p className="px-3 text-sm leading-4 text-primary-content">
+                  <p className="px-3 text-[15px] leading-4 text-primary-content">
                     {description}
                   </p>
                 </div>
