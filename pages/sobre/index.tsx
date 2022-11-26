@@ -30,9 +30,9 @@ const About: NextPage = () => {
             <Text asChild>
               <p>
                 Buscamos sempre uma solução completa para nossos clientes, com
-                qualidade e seriedade. Para que nossos clientes tenham a
-                tranquilidade de estarem acompanhados por profissionais
-                atualizados e que amam seu propósito de trabalhar na INOVA.
+                qualidade e seriedade, para que tenham a tranquilidade de
+                estarem acompanhados por profissionais atualizados e que amam
+                seu propósito de trabalhar na INOVA.
               </p>
             </Text>
 
