@@ -205,8 +205,8 @@ const About: NextPage = () => {
           </Text>
 
           <img
-            src="/images/service-limpeza-de-caixa-dagua.png"
-            alt="banner - exemplo de serviço"
+            src="/images/home-cto.png"
+            alt="banner - solicitar orçamento"
             className="w-full h-[292px] mb-12 hidden lg:block object-cover"
           />
 
