@@ -41,11 +41,11 @@ const Home: NextPage = () => {
         className="min-h-[476px] lg:min-h-[893px] py-8 flex flex-col justify-center items-center"
       >
         <Container className="w-full">
-          <Heading className="w-full mb-6 text-center text-secondary-500">
+          <Heading className="w-full mb-6 lg:text-center text-secondary-500">
             Serviços
           </Heading>
 
-          <Text className="w-full block text-center">
+          <Text className="w-full block lg:text-center">
             Veja a seguir todos os serviços oferecidos pela INOVA
           </Text>
 
@@ -99,9 +99,9 @@ const Home: NextPage = () => {
               <div className="w-[90%] max-w-[226px] h-[391px] mx-7 flex flex-col rounded-[5px] overflow-hidden">
                 <div className="flex-1 px-3 py-2 flex flex-col justify-center bg-primary-500 text-primary-content">
                   <header className="mb-6 flex items-center gap-2">
-                    <div className="w-[10px] h-5 bg-primary-content" />
+                    <div className="w-[10px] h-6 bg-primary-content" />
 
-                    <h3 className="text-[8px] leading-[10px] font-semibold uppercase">
+                    <h3 className="text-[10px] leading-3 font-semibold uppercase">
                       {title}
                     </h3>
                   </header>

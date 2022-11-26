@@ -38,7 +38,7 @@ export const servicesInfo: ServiceInfo[] = [
     id: 6,
     title: "Limpeza de fachadas",
     description:
-      "A limpeza de fachada predial é uma tarefa que envolve uma série de conhecimentos específicos, do tipo ideal de detergente a técnicas de alpinismo e normas de segurança, para ser realizada de maneira eficiente e segura. Por isso são necessários profissionais capacitados e experientes. Já a limpeza de fachada refere-se ao processo de garantir que o exterior de um edifício esteja livre de qualquer sujeira.",
+      "A limpeza de fachadas refere-se ao processo de garantir que o exterior de um edifício esteja livre de qualquer sujeira. A limpeza da fachada é uma tarefa que envolve uma série de conhecimentos específicos, desde o tipo de detergente ideal até técnicas de montanhismo e normas de segurança. Portanto, são necessários profissionais qualificados e experientes.",
     imageUrl: "/images/service-limpeza-de-fachadas.png",
   },
   {
@@ -67,7 +67,7 @@ export const servicesInfo: ServiceInfo[] = [
     id: 5,
     title: "Manutenção de sistema fotovoltaico",
     description:
-      "A manutenção preditiva do sistema de energia solar consiste no monitoramento da sua geração para possíveis quedas de desempenho e na inspeção visual dos equipamentos, incluindo o painel solar, inversor e string box, a fim de detectar defeitos nas placas solares. Já a manutenção preventiva do sistema de energia solar engloba a limpeza periódica das placas solares, a higienização do inversor e uma inspeção completa de todos os componentes elétricos e mecânicos para otimizar o desempenho.",
+      "A manutenção preditiva do sistema de energia solar consiste no monitoramento de sua geração para possíveis quedas de desempenho e inspeção visual dos equipamentos, incluindo painel solar, inversor e string box. A manutenção preventiva inclui a limpeza periódica dos painéis solares, higienização do inversor e uma inspeção completa de todos os componentes elétricos e mecânicos.",
     imageUrl: "/images/service-spda-e-manutencao-de-sistema-fotovoltaico.png",
   },
   {
