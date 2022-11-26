@@ -62,6 +62,15 @@ export const Footer = () => {
                 </Link>
               </li>
             ))}
+
+            <li>
+              <Link
+                href="/orcamento"
+                className="text-sm lg:text-sm uppercase hover:text-secondary-500 transition-colors"
+              >
+                orçamento
+              </Link>
+            </li>
           </ul>
         </nav>
 
