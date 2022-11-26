@@ -38,10 +38,10 @@ const Home: NextPage = () => {
 
       <section
         id="servicos"
-        className="min-h-[476px] lg:min-h-[893px] py-8 flex flex-col justify-center items-center"
+        className="min-h-[476px] lg:min-h-[893px] py-20 lg:py-8 flex flex-col justify-center items-center"
       >
         <Container className="w-full">
-          <Heading className="w-full mb-6 lg:text-center text-secondary-500">
+          <Heading className="w-full mb-5 lg:text-center text-secondary-500">
             Serviços
           </Heading>
 
@@ -92,14 +92,14 @@ const Home: NextPage = () => {
         {/* mobile slide */}
         <Splide
           options={{ arrows: false, autoWidth: true }}
-          className="w-full lg:hidden mt-16 mb-10"
+          className="w-full lg:hidden mt-16"
         >
           {servicesInfo.map(({ id, title, description, imageUrl }) => (
             <SplideSlide key={id}>
               <div className="w-[90%] max-w-[264px] h-[432px] mx-7 flex flex-col rounded-[5px] overflow-hidden">
                 <div className="flex-1 bg-primary-500 text-primary-content">
                   <header className="h-[60px] mb-6 px-3 flex items-center gap-2 bg-base-300 text-white border-2 border-primary-500 rounded-tl-[5px] rounded-tr-[5px]">
-                    <div className="w-[10px] h-6 bg-white" />
+                    <div className="flex-shrink-0 w-[10px] h-6 bg-white" />
 
                     <h3 className="text-sm font-semibold uppercase">{title}</h3>
                   </header>
