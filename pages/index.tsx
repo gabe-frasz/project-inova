@@ -96,17 +96,17 @@ const Home: NextPage = () => {
         >
           {servicesInfo.map(({ id, title, description, imageUrl }) => (
             <SplideSlide key={id}>
-              <div className="w-[90%] max-w-[226px] h-[391px] mx-7 flex flex-col rounded-[5px] overflow-hidden">
-                <div className="flex-1 px-3 py-2 flex flex-col justify-center bg-primary-500 text-primary-content">
-                  <header className="mb-6 flex items-center gap-2">
-                    <div className="w-[10px] h-6 bg-primary-content" />
+              <div className="w-[90%] max-w-[226px] h-[352px] mx-7 flex flex-col rounded-[5px] overflow-hidden">
+                <div className="flex-1 bg-primary-500 text-primary-content">
+                  <header className="h-[60px] mb-6 px-3 flex items-center gap-2 bg-black text-white border border-primary-500">
+                    <div className="w-[10px] h-6 bg-white" />
 
                     <h3 className="text-[10px] leading-3 font-semibold uppercase">
                       {title}
                     </h3>
                   </header>
 
-                  <p className="text-[10px] leading-3 text-primary-content">
+                  <p className="px-3 text-[10px] leading-3 text-primary-content">
                     {description}
                   </p>
                 </div>
