@@ -73,7 +73,7 @@ const InputFieldSelect = ({
         {children}
       </select>
 
-      <div className="absolute top-0 right-0 h-full aspect-square border-[6px] border-white pointer-events-none">
+      <div className="absolute top-0 right-0 h-full aspect-square border-4 lg:border-[6px] border-white pointer-events-none">
         <svg
           viewBox="0 0 47 47"
           fill="none"
