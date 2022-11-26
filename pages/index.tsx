@@ -36,17 +36,18 @@ const Home: NextPage = () => {
         </main>
       </Container>
 
-      <Container asChild>
-        <section
-          id="servicos"
-          className="min-h-[476px] lg:min-h-[893px] py-8 flex flex-col justify-center items-center"
-        >
+      <section
+        id="servicos"
+        className="min-h-[476px] lg:min-h-[893px] py-8 flex flex-col justify-center items-center"
+      >
+        <Container className="w-full">
           <Heading className="mb-6 text-secondary-500">Serviços</Heading>
 
           <Text className="mb-24 text-center">
             Veja a seguir todos os serviços oferecidos pela INOVA
           </Text>
 
+          {/* desktop slide */}
           <Splide
             hasTrack={false}
             options={{
@@ -58,7 +59,7 @@ const Home: NextPage = () => {
               perPage: 3,
               perMove: 3,
             }}
-            className="w-full flex"
+            className="hidden lg:flex"
           >
             <div className="splide__arrows flex items-center">
               <button className="splide__arrow splide__arrow--prev">
@@ -84,8 +85,42 @@ const Home: NextPage = () => {
               </button>
             </div>
           </Splide>
-        </section>
-      </Container>
+        </Container>
+
+        {/* mobile slide */}
+        <Splide
+          options={{ arrows: false, autoWidth: true }}
+          className="w-full lg:hidden mt-16"
+        >
+          {servicesInfo.map(({ id, title, description, imageUrl }) => (
+            <SplideSlide key={id}>
+              <div className="w-[90%] max-w-[196px] h-[318px] mx-7 flex flex-col rounded-[5px] overflow-hidden">
+                <div className="flex-1 px-3 py-2 flex flex-col justify-center bg-white text-primary-content">
+                  <header className="mb-6 flex items-center gap-2">
+                    <div className="w-[10px] h-5 bg-primary-500" />
+
+                    <h3 className="text-[8px] text-primary-500 leading-[10px] font-semibold uppercase">
+                      {title}
+                    </h3>
+                  </header>
+
+                  <p className="text-[10px] leading-3 text-primary-content">
+                    {description}
+                  </p>
+                </div>
+
+                <figure className="h-[123px]">
+                  <img
+                    src={imageUrl}
+                    alt={`Serviço INOVA - ${title}`}
+                    className="w-full h-full object-cover"
+                  />
+                </figure>
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </section>
 
       <Container asChild>
         <section className="relative min-h-[514px] lg:min-h-[609px] flex flex-col justify-center lg:items-end bg-about-banner bg-cover bg-no-repeat bg-bottom">
@@ -126,8 +161,8 @@ const Home: NextPage = () => {
           </Text>
 
           <img
-            src="/images/service-limpeza-de-caixa-dagua.png"
-            alt="banner - exemplo de serviço"
+            src="/images/home-cto.png"
+            alt="banner - solicitar orçamento"
             className="w-full h-[292px] mb-12 hidden lg:block object-cover"
           />
 
