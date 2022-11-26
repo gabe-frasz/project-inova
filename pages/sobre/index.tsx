@@ -75,7 +75,7 @@ const About: NextPage = () => {
             easing: "linear",
             gap: 50,
             interval: 1000,
-            speed: 100000,
+            speed: 80000,
             type: "loop",
           }}
         >
