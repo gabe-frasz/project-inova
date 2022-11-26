@@ -4,8 +4,8 @@ export const navbarOptions = [
     href: "/#servicos",
   },
   {
-    name: "orçamento",
-    href: "/orcamento",
+    name: "trabalhos",
+    href: "/sobre#trabalhos",
   },
   {
     name: "sobre",
