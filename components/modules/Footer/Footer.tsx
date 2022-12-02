@@ -20,7 +20,11 @@ export const Footer = () => {
           </div>
 
           <div className="flex gap-5">
-            <a href="" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/inovaalpin"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SocialIcon type="facebook" />
             </a>
 
