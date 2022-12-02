@@ -44,7 +44,7 @@ export const Footer = () => {
             </a>{" "}
             e{" "}
             <a
-              href="https://www.linkedin.com/in/gabriel-vs-frasao"
+              href="https://linktr.ee/gabriel_vs_frasao"
               target="_blank"
               rel="noreferrer"
             >
