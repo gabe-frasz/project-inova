@@ -21,25 +21,29 @@ const About: NextPage = () => {
           <div className="flex flex-col gap-5">
             <Text asChild>
               <p>
-                Aqui na INOVA Alpim atuamos nas áreas de Trabalho em Altura,
-                Elétrica, Para- raios, Limpeza de Fachada, Limpeza de Vidros,
-                Vedação, Calafetação e pintura.
+                INOVA ALPIN é uma empresa atuante na área de alpinismo
+                industrial, com experiência em execuções rápidas em sua obra e
+                projetos de alto padrão. Todas as fases do trabalho são tratadas
+                com segurança e qualidade, e nossos profissionais são
+                devidamente habilitados e treinados no acesso por corda.
               </p>
             </Text>
 
             <Text asChild>
               <p>
-                Buscamos sempre uma solução completa para nossos clientes, com
-                qualidade e seriedade, para que tenham a tranquilidade de
-                estarem acompanhados por profissionais atualizados e que amam
-                seu propósito de trabalhar na INOVA.
+                Capacidade para atender a demanda de pacotes de projetos em
+                prazos curtos, com a qualidade e baixo custo. Possibilidade de
+                expressão, imediata, com a necessidade do cliente.
               </p>
             </Text>
 
             <Text asChild>
               <p>
-                Juntos tornamos nosso mundo mais verde e saudável, e nossa vida
-                mais segura e saudável.
+                Estudamos a necessidade de projeto e apresentamos soluções
+                rápidas e inteligentes. Buscamos sempre uma solução completa
+                para nossos clientes, com qualidade e seriedade, para que tenham
+                a tranquilidade de estarem acompanhados por profissionais
+                atualizados e que amam seu propósito de trabalhar na INOVA.
               </p>
             </Text>
           </div>
