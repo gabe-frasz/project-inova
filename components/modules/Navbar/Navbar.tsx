@@ -45,7 +45,7 @@ export const Navbar = () => {
           )}
         >
           <li
-            className="lg:hidden hover:text-secondary-500 uppercase transition-colors"
+            className="lg:hidden hover:text-primary-500 uppercase transition-colors"
             onClick={toggleMenu}
           >
             <Link href="/">Início</Link>
@@ -54,7 +54,7 @@ export const Navbar = () => {
           {navbarOptions.map(({ name, href }) => (
             <li
               key={name}
-              className="hover:text-secondary-500 uppercase transition-colors"
+              className="hover:text-primary-500 uppercase transition-colors"
               onClick={toggleMenu}
             >
               <Link href={href}>{name}</Link>
@@ -62,11 +62,11 @@ export const Navbar = () => {
           ))}
 
           <li
-            className="hover:text-secondary-500 uppercase transition-colors"
+            className="hover:text-primary-500 uppercase transition-colors"
             onClick={toggleMenu}
           >
             <Link href="/orcamento">
-              <Button variant="secondary">Solicitar orçamento</Button>
+              <Button>Solicitar orçamento</Button>
             </Link>
           </li>
         </ul>

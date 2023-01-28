@@ -35,9 +35,9 @@ export const ServiceModal = ({
     </PrimitiveDialog.Trigger>
 
     <PrimitiveDialog.Portal>
-      <PrimitiveDialog.Overlay className="fixed inset-0 w-screen bg-black opacity-70 z-40" />
+      <PrimitiveDialog.Overlay className="fixed inset-0 w-screen bg-black opacity-40 z-40" />
 
-      <PrimitiveDialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[656px] h-[634px] xl:max-w-[1030px] xl:h-[590px] p-14 flex flex-col justify-between gap-4 bg-white text-primary-content z-50">
+      <PrimitiveDialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[656px] h-[634px] xl:max-w-[1030px] xl:h-[590px] p-14 flex flex-col border-[3px] border-[#585C68CC] justify-between gap-4 bg-base-300/70 backdrop-blur-[2px] text-primary-content z-50">
         <PrimitiveDialog.Title asChild>
           <div className="relative pl-4 py-3 lg:pl-8 lg:py-5">
             <div className="absolute top-3 left-0 w-[10px] h-[calc(100%-24px)] lg:w-5 bg-primary-500" />
@@ -50,7 +50,7 @@ export const ServiceModal = ({
 
         <PrimitiveDialog.Description asChild>
           <Text asChild>
-            <p className="text-sm text-primary-content">{description}</p>
+            <p className="text-sm text-white">{description}</p>
           </Text>
         </PrimitiveDialog.Description>
 

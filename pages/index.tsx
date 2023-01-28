@@ -16,9 +16,9 @@ const Home: NextPage = () => {
 
       <Container asChild>
         <main className="relative min-h-[700px] h-[calc(100vh-102px)] lg:h-[calc(100vh-120px)] flex flex-col justify-center bg-home-banner bg-cover bg-bottom overflow-x-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient z-0" />
+          {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient z-0" /> */}
 
-          <Heading className="max-w-[649px] mb-6 text-secondary-500 z-10">
+          <Heading className="max-w-[649px] mb-6 text-primary-500 leading-[60px] z-10">
             Soluções inovadoras para sua empresa.
           </Heading>
 
@@ -96,17 +96,15 @@ const Home: NextPage = () => {
         >
           {servicesInfo.map(({ id, title, description, imageUrl }) => (
             <SplideSlide key={id}>
-              <div className="w-[90%] max-w-[264px] h-[432px] mx-7 flex flex-col rounded-[5px] overflow-hidden">
-                <div className="flex-1 bg-primary-500 text-primary-content">
-                  <header className="h-[60px] mb-6 px-3 flex items-center gap-2 bg-base-300 text-white border-2 border-primary-500 rounded-tl-[5px] rounded-tr-[5px]">
-                    <div className="flex-shrink-0 w-[10px] h-6 bg-white" />
+              <div className="w-[90%] max-w-[264px] h-[432px] border-2 border-primary-500 mx-7 flex flex-col rounded-[5px] overflow-hidden">
+                <div className="flex-1 bg-base-300 text-base-content">
+                  <header className="h-[60px] mb-6 px-3 flex items-center gap-2 bg-primary-500 text-primary-content">
+                    <div className="flex-shrink-0 w-[10px] h-6 bg-primary-content" />
 
                     <h3 className="text-sm font-semibold uppercase">{title}</h3>
                   </header>
 
-                  <p className="px-3 text-[15px] leading-4 text-primary-content">
-                    {description}
-                  </p>
+                  <p className="px-3 text-[15px] leading-4">{description}</p>
                 </div>
 
                 <figure className="h-[123px]">

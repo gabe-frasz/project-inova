@@ -15,38 +15,47 @@ const About: NextPage = () => {
       <Head title="INOVA | Sobre" />
 
       <Container asChild>
-        <main className="min-h-[492px] py-14 flex flex-col justify-center">
-          <Heading className="mb-6 text-secondary-500">Sobre a INOVA</Heading>
+        <main className="min-h-[492px] py-14 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="flex flex-col justify-center">
+            <Heading className="mb-6 text-secondary-500">Sobre a INOVA</Heading>
 
-          <div className="flex flex-col gap-5">
-            <Text asChild>
-              <p>
-                INOVA ALPIN é uma empresa atuante na área de alpinismo
-                industrial, com experiência em execuções rápidas em sua obra e
-                projetos de alto padrão. Todas as fases do trabalho são tratadas
-                com segurança e qualidade, e nossos profissionais são
-                devidamente habilitados e treinados no acesso por corda.
-              </p>
-            </Text>
+            <div className="flex-[1.5] flex flex-col gap-5">
+              <Text asChild>
+                <p>
+                  INOVA ALPIN é uma empresa atuante na área de alpinismo
+                  industrial, com experiência em execuções rápidas em sua obra e
+                  projetos de alto padrão. Todas as fases do trabalho são
+                  tratadas com segurança e qualidade, e nossos profissionais são
+                  devidamente habilitados e treinados no acesso por corda.
+                </p>
+              </Text>
 
-            <Text asChild>
-              <p>
-                Capacidade para atender a demanda de pacotes de projetos em
-                prazos curtos, com a qualidade e baixo custo. Possibilidade de
-                expressão, imediata, com a necessidade do cliente.
-              </p>
-            </Text>
+              <Text asChild>
+                <p>
+                  Capacidade para atender a demanda de pacotes de projetos em
+                  prazos curtos, com a qualidade e baixo custo. Possibilidade de
+                  expressão, imediata, com a necessidade do cliente.
+                </p>
+              </Text>
 
-            <Text asChild>
-              <p>
-                Estudamos a necessidade de projeto e apresentamos soluções
-                rápidas e inteligentes. Buscamos sempre uma solução completa
-                para nossos clientes, com qualidade e seriedade, para que tenham
-                a tranquilidade de estarem acompanhados por profissionais
-                atualizados e que amam seu propósito de trabalhar na INOVA.
-              </p>
-            </Text>
+              <Text asChild>
+                <p>
+                  Estudamos a necessidade de projeto e apresentamos soluções
+                  rápidas e inteligentes. Buscamos sempre uma solução completa
+                  para nossos clientes, com qualidade e seriedade, para que
+                  tenham a tranquilidade de estarem acompanhados por
+                  profissionais atualizados e que amam seu propósito de
+                  trabalhar na INOVA.
+                </p>
+              </Text>
+            </div>
           </div>
+
+          <img
+            src="/images/about-illustration.png"
+            alt="INOVA illustration"
+            className="w-full max-w-[350px] xl:max-w-[503px] object-cover"
+          />
         </main>
       </Container>
 
