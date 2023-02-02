@@ -89,6 +89,7 @@ const About: NextPage = () => {
             gap: 50,
             interval: 1000,
             speed: 80000,
+            pagination: false,
             type: "loop",
           }}
         >

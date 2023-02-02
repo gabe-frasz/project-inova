@@ -58,6 +58,7 @@ const Home: NextPage = () => {
                 1280: { perPage: 2, perMove: 2 },
                 768: { perPage: 1, perMove: 1 },
               },
+              pagination: false,
               perPage: 3,
               perMove: 3,
             }}
@@ -91,7 +92,7 @@ const Home: NextPage = () => {
 
         {/* mobile slide */}
         <Splide
-          options={{ arrows: false, autoWidth: true }}
+          options={{ arrows: false, autoWidth: true, pagination: false }}
           className="w-full lg:hidden mt-16"
         >
           {servicesInfo.map(({ id, title, description, imageUrl }) => (
