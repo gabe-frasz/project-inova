@@ -13,3 +13,23 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #eb5e28; /* color of the scroll thumb */
 }
+
+ul.splide__pagination {
+  position: absolute;
+  display: flex;
+  gap: 9px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ul.splide__pagination button.splide__pagination__page {
+  background-color: #fff3;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s;
+}
+
+ul.splide__pagination button.splide__pagination__page.is-active {
+  background-color: #73c2be;
+}
