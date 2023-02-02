@@ -38,15 +38,23 @@ export const ServiceModal = ({
       <PrimitiveDialog.Overlay className="fixed inset-0 w-screen bg-black opacity-40 z-40" />
 
       <PrimitiveDialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[656px] h-[634px] xl:max-w-[1030px] xl:h-[590px] p-14 flex flex-col border-[3px] border-[#585C68CC] justify-between gap-4 bg-base-300/70 backdrop-blur-[2px] text-primary-content z-50">
-        <PrimitiveDialog.Title asChild>
-          <div className="relative pl-4 py-3 lg:pl-8 lg:py-5">
-            <div className="absolute top-3 left-0 w-[10px] h-[calc(100%-24px)] lg:w-5 bg-primary-500" />
+        <header className="flex justify-between items-center">
+          <PrimitiveDialog.Title asChild>
+            <div className="relative pl-4 py-3 lg:pl-8 lg:py-5">
+              <div className="absolute top-3 left-0 w-[10px] h-[calc(100%-24px)] lg:w-5 bg-primary-500" />
+              <Text className="text-primary-500 font-semibold uppercase">
+                {title}
+              </Text>
+            </div>
+          </PrimitiveDialog.Title>
 
-            <Text className="text-primary-500 font-semibold uppercase">
-              {title}
-            </Text>
-          </div>
-        </PrimitiveDialog.Title>
+          <PrimitiveDialog.Close className="text-primary-500">
+            <MenuToggler
+              isMobileMenuOpen={true}
+              className="lg:block outline-none"
+            />
+          </PrimitiveDialog.Close>
+        </header>
 
         <PrimitiveDialog.Description asChild>
           <Text asChild>
@@ -59,13 +67,6 @@ export const ServiceModal = ({
           alt={`Serviço INOVA - ${title}`}
           className="w-full h-[123px] lg:h-[246px] object-cover"
         />
-
-        <PrimitiveDialog.Close className="absolute top-5 right-5 text-primary-500">
-          <MenuToggler
-            isMobileMenuOpen={true}
-            className="lg:block outline-none"
-          />
-        </PrimitiveDialog.Close>
       </PrimitiveDialog.Content>
     </PrimitiveDialog.Portal>
   </PrimitiveDialog.Root>
