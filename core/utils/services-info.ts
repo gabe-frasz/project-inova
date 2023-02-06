@@ -56,7 +56,7 @@ export const servicesInfo: ServiceInfo[] = [
     imageUrl:
       "/images/service-instalacao-de-linha-de-vida-e-ponto-de-ancoragem.png",
     largeImgUrl:
-      "/images/service-instalacao-de-linha-de-vida-e-ponto-de-ancoragem.png",
+      "/images/service-instalacao-de-linha-de-vida-e-ponto-de-ancoragem-lg.png",
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ export const servicesInfo: ServiceInfo[] = [
       "A manutenção preditiva do sistema de energia solar consiste no monitoramento de sua geração para possíveis quedas de desempenho e inspeção visual dos equipamentos, incluindo painel solar, inversor e string box. A manutenção preventiva inclui a limpeza periódica dos painéis solares, higienização do inversor e uma inspeção completa de todos os componentes elétricos e mecânicos.",
     imageUrl: "/images/service-spda-e-manutencao-de-sistema-fotovoltaico.png",
     largeImgUrl:
-      "/images/service-spda-e-manutencao-de-sistema-fotovoltaico.png",
+      "/images/service-spda-e-manutencao-de-sistema-fotovoltaico-lg.png",
   },
   {
     id: 10,
