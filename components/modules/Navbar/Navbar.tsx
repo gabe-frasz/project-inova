@@ -1,12 +1,15 @@
 import { Container } from "@components/layouts";
 import { Button, Logo, MenuToggler } from "@components/widgets";
-import { navbarOptions } from "@core/utils";
 import c from "clsx";
-import Link from "next/link";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isHomepage = useRouter().pathname === "/";
+  const isAboutPage = useRouter().pathname.includes("/sobre");
 
   function toggleMenu() {
     setIsMobileMenuOpen((prev) => {
@@ -48,26 +51,49 @@ export const Navbar = () => {
             className="lg:hidden hover:text-primary-500 uppercase transition-colors"
             onClick={toggleMenu}
           >
-            <Link href="/">Início</Link>
+            <NextLink href="/">Início</NextLink>
           </li>
-
-          {navbarOptions.map(({ name, href }) => (
-            <li
-              key={name}
-              className="hover:text-primary-500 uppercase transition-colors"
-              onClick={toggleMenu}
-            >
-              <Link href={href}>{name}</Link>
-            </li>
-          ))}
 
           <li
             className="hover:text-primary-500 uppercase transition-colors"
             onClick={toggleMenu}
           >
-            <Link href="/orcamento">
+            {isHomepage ? (
+              <Link to="servicos" smooth className="cursor-pointer">
+                Serviços
+              </Link>
+            ) : (
+              <NextLink href="/?scroll_to=servicos">Serviços</NextLink>
+            )}
+          </li>
+
+          <li
+            className="hover:text-primary-500 uppercase transition-colors"
+            onClick={toggleMenu}
+          >
+            {isAboutPage ? (
+              <Link to="trabalhos" smooth className="cursor-pointer">
+                Trabalhos
+              </Link>
+            ) : (
+              <NextLink href="/sobre?scroll_to=trabalhos">Trabalhos</NextLink>
+            )}
+          </li>
+
+          <li
+            className="hover:text-primary-500 uppercase transition-colors"
+            onClick={toggleMenu}
+          >
+            <NextLink href="/sobre">Sobre</NextLink>
+          </li>
+
+          <li
+            className="hover:text-primary-500 uppercase transition-colors"
+            onClick={toggleMenu}
+          >
+            <NextLink href="/orcamento">
               <Button>Solicitar orçamento</Button>
-            </Link>
+            </NextLink>
           </li>
         </ul>
       </nav>

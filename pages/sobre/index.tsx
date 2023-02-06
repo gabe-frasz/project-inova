@@ -2,6 +2,7 @@
 import { Head } from "@components/config";
 import { Container } from "@components/layouts";
 import { Button, Heading, Text } from "@components/widgets";
+import { useScrollTo } from "@core/hooks";
 import { aboutSliderImages } from "@core/utils";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
@@ -10,6 +11,8 @@ import { NextPage } from "next";
 import Link from "next/link";
 
 const About: NextPage = () => {
+  useScrollTo();
+
   return (
     <>
       <Head title="INOVA | Sobre" />

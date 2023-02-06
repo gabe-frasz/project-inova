@@ -3,13 +3,17 @@ import { Head } from "@components/config";
 import { Container } from "@components/layouts";
 import { ServiceModal } from "@components/modules";
 import { Button, Heading, SliderArrow, Text } from "@components/widgets";
+import { useScrollTo } from "@core/hooks";
 import { servicesInfo } from "@core/utils";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import { NextPage } from "next";
 import Link from "next/link";
+import { Element } from "react-scroll";
 
 const Home: NextPage = () => {
+  useScrollTo();
+
   return (
     <>
       <Head title="INOVA | Home" />
@@ -36,8 +40,9 @@ const Home: NextPage = () => {
         </main>
       </Container>
 
-      <section
-        id="servicos"
+      <Element
+        name="servicos"
+        as="section"
         className="min-h-[476px] lg:min-h-[893px] py-20 lg:py-8 flex flex-col justify-center items-center"
       >
         <Container className="w-full">
@@ -119,7 +124,7 @@ const Home: NextPage = () => {
             </SplideSlide>
           ))}
         </Splide>
-      </section>
+      </Element>
 
       <Container asChild>
         <section className="relative min-h-[514px] lg:min-h-[609px] flex flex-col justify-center lg:items-end bg-about-banner bg-cover bg-no-repeat bg-bottom">
