@@ -56,10 +56,15 @@ export const Navbar = () => {
 
           <li
             className="hover:text-primary-500 uppercase transition-colors"
-            onClick={toggleMenu}
+            onClick={isHomepage ? undefined : toggleMenu}
           >
             {isHomepage ? (
-              <Link to="servicos" smooth className="cursor-pointer">
+              <Link
+                to="servicos"
+                onClick={toggleMenu}
+                smooth
+                className="cursor-pointer"
+              >
                 Serviços
               </Link>
             ) : (
@@ -69,10 +74,15 @@ export const Navbar = () => {
 
           <li
             className="hover:text-primary-500 uppercase transition-colors"
-            onClick={toggleMenu}
+            onClick={isAboutPage ? undefined : toggleMenu}
           >
             {isAboutPage ? (
-              <Link to="trabalhos" smooth className="cursor-pointer">
+              <Link
+                to="trabalhos"
+                onClick={toggleMenu}
+                smooth
+                className="cursor-pointer"
+              >
                 Trabalhos
               </Link>
             ) : (
