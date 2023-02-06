@@ -82,6 +82,7 @@ const Home: NextPage = () => {
                     title={props.title}
                     description={props.description}
                     imageUrl={props.imageUrl}
+                    largeImgUrl={props.largeImgUrl}
                   />
                 </SplideSlide>
               ))}

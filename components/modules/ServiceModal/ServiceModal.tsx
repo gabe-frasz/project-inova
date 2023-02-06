@@ -9,6 +9,7 @@ interface ServiceModalProps {
   title: string;
   description: string;
   imageUrl: string;
+  largeImgUrl: string;
 }
 
 const variants: Variants = {
@@ -33,6 +34,7 @@ export const ServiceModal = ({
   title,
   description,
   imageUrl,
+  largeImgUrl,
 }: ServiceModalProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -95,7 +97,7 @@ export const ServiceModal = ({
           </PrimitiveDialog.Description>
 
           <img
-            src={imageUrl}
+            src={largeImgUrl}
             alt={`Serviço INOVA - ${title}`}
             className="w-full h-[123px] lg:h-[246px] object-cover"
           />
