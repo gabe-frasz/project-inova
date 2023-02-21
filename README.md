@@ -10,7 +10,10 @@
 
 ## Demo
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Browser frame](./.github/docs/browser-frame.png)
+![Frame 1](./.github/docs/frame-1.png)
+![Frame 2](./.github/docs/frame-2.png)
+![Frame 3](./.github/docs/frame-3.png)
 
 ## Authors
 
